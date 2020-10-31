@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Nearby · Barikoi</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Nearby · Barikoi"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="## "/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Barikoi</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/intro" target="_self">API</a></li><li class=""><a href="/docs/library-intro" target="_self">JavaScript Library</a></li><li class=""><a href="/docs/android-intro" target="_self">Android Location Library</a></li><li class=""><a href="/docs/pricing-intro" target="_self">Pricing</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Barikoi Places API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Barikoi Places API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Places API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/rev-geo">Reverse Geocode</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-server">Reverse Geocoding (Server)</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-code">Geocoding</a></li><li class="navListItem"><a class="navItem" href="/docs/autocomplete">Autocomplete</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/nearby">Nearby</a></li><li class="navListItem"><a class="navItem" href="/docs/distance">Distance</a></li><li class="navListItem"><a class="navItem" href="/docs/rupantor-geocoder">Rupantor Geocoder</a></li><li class="navListItem"><a class="navItem" href="/docs/route-api">Routing Api</a></li><li class="navListItem"><a class="navItem" href="/docs/add-place">Add Place</a></li><li class="navListItem"><a class="navItem" href="/docs/district">District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/sub-district">Sub-District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/city-api">City Api</a></li><li class="navListItem"><a class="navItem" href="/docs/union-api">Union Api</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Verify</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/task-assign">Assign Task</a></li><li class="navListItem"><a class="navItem" href="/docs/request-revision">Request Revision</a></li><li class="navListItem"><a class="navItem" href="/docs/task-details">Task Details</a></li><li class="navListItem"><a class="navItem" href="/docs/applications">Applications</a></li><li class="navListItem"><a class="navItem" href="/docs/application-details">Application Details</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">City Corporation API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/ward-by-location">Ward by Geo location</a></li><li class="navListItem"><a class="navItem" href="/docs/zone-by-location">Zone by Geo location</a></li><li class="navListItem"><a class="navItem" href="/docs/ward-zone-by-location">Ward &amp; Zone by Geolocation</a></li><li class="navListItem"><a class="navItem" href="/docs/city-corp-by-location">City Corporation by Geolocation</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Nearby</h1></header><article><div><span><h2></h2>
+<p><code>GET</code> Nearby API</p>
+<pre><code class="hljs"><span class="hljs-symbol">https:</span><span class="hljs-comment">//barikoi.xyz/v2/api/search/nearby/API_KEY/DISTANCE/LIMIT?longitude=TARGET_LONGITUDE&amp;latitude=TARGET_LATITUDE</span>
+</code></pre>
+<p>All Nearby API counts according to the limit parameter or number of places returned in response data</p>
+<h2><a class="anchor" aria-hidden="true" id="api-params"></a><a href="#api-params" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API PARAMS</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th style="text-align:center">Value</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>longitude</td><td style="text-align:center">90.36668110638857</td><td>Required</td></tr>
+<tr><td>latitude</td><td style="text-align:center">23.83723803415923</td><td>Required</td></tr>
+<tr><td>distance</td><td style="text-align:center">0.5 (km)</td><td>Required</td></tr>
+<tr><td>limit</td><td style="text-align:center">10</td><td>Required</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="nearby-api-request-example"></a><a href="#nearby-api-request-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nearby API Request Example</h2>
+<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'https://barikoi.xyz/v2/api/search/nearby/API_KEY/0.5/10?longitude=90.36668110638857&amp;latitude=23.83723803415923'</span>)
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+    .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error:'</span>, error))
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Success:'</span>, response))
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="example-response"></a><a href="#example-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Response</h2>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"places"</span>: [
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">452923</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Artland"</span>,
+            <span class="hljs-attr">"distance_in_meters"</span>: <span class="hljs-number">9.91042449889066</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.36668747663498"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.83714909804975"</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Education"</span>,
+            <span class="hljs-attr">"Address"</span>: <span class="hljs-string">"Artland, Jol Torongo, House 555, Road 9"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Mirpur Dohs"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1216</span>,
+            <span class="hljs-attr">"subType"</span>: <span class="hljs-string">"Art School"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"IDIX1880"</span>,
+            <span class="hljs-attr">"ST_AsText(location)"</span>: <span class="hljs-string">"POINT(90.36668747663498 23.83714909804975)"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">485763</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Mulytic Labs"</span>,
+            <span class="hljs-attr">"distance_in_meters"</span>: <span class="hljs-number">11.24627601291792</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.36672234535217"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.837144191228138"</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Office"</span>,
+            <span class="hljs-attr">"Address"</span>: <span class="hljs-string">"Mulytic Labs, Jol Torongo, House 555, Road 9"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Mirpur Dohs"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1216</span>,
+            <span class="hljs-attr">"subType"</span>: <span class="hljs-string">"Branch Office"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"IDVH3378"</span>,
+            <span class="hljs-attr">"ST_AsText(location)"</span>: <span class="hljs-string">"POINT(90.36672234535217 23.837144191228138)"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">512618</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Touch-Up Beauty Parlour"</span>,
+            <span class="hljs-attr">"distance_in_meters"</span>: <span class="hljs-number">11.700339826282454</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.366759896278"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.837161365103"</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Shop"</span>,
+            <span class="hljs-attr">"Address"</span>: <span class="hljs-string">"Touch-Up Beauty Parlour, Jol Torongo, House 555, Road 9"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Mirpur Dohs"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1216</span>,
+            <span class="hljs-attr">"subType"</span>: <span class="hljs-string">"Womens Parlour"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"FLDL1270"</span>,
+            <span class="hljs-attr">"ST_AsText(location)"</span>: <span class="hljs-string">"POINT(90.366759896278 23.837161365103)"</span>
+        }
+         .......
+    ]
+}         
+</code></pre>
+<p>For each request of Nearby API with all parameter 1 is counted.</p>
+<h2></h2>
+<p><code>GET</code> Nearby API with Category</p>
+<pre><code class="hljs">https:<span class="hljs-regexp">//</span>barikoi.xyz<span class="hljs-regexp">/v2/</span>api<span class="hljs-regexp">/search/</span>nearby<span class="hljs-regexp">/category/</span>API_KEY<span class="hljs-regexp">/DISTANCE/</span>LIMIT?longitude=TARGET_LONGITUDE&amp;latitude=TARGET_LATITUDE&amp;ptype=CATEGORY
+</code></pre>
+<p>This returns data with the specific pTypes from the list below:</p>
+<table>
+<thead>
+<tr><th></th><th style="text-align:center">pTypes</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Admin</td><td style="text-align:center">Fuel</td><td>Others</td></tr>
+<tr><td>Agricultural</td><td style="text-align:center">Government</td><td>Recreation</td></tr>
+<tr><td>Bank</td><td style="text-align:center">Healthcare</td><td>Religious Place</td></tr>
+<tr><td>Commercial</td><td style="text-align:center">Hotel</td><td>Residential</td></tr>
+<tr><td>Construction</td><td style="text-align:center">Industry</td><td>Shop</td></tr>
+<tr><td>Education</td><td style="text-align:center">Landmark</td><td>Transportation</td></tr>
+<tr><td>Food</td><td style="text-align:center">Office</td><td>Utility</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="api-params-1"></a><a href="#api-params-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API PARAMS</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th style="text-align:center">Value</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>longitude</td><td style="text-align:center">90.36668110638857</td><td>Required</td></tr>
+<tr><td>latitude</td><td style="text-align:center">23.83723803415923</td><td>Required</td></tr>
+<tr><td>ptype</td><td style="text-align:center">Office</td><td>Required</td></tr>
+<tr><td>distance</td><td style="text-align:center">1 (km)</td><td>Required</td></tr>
+<tr><td>limit</td><td style="text-align:center">10</td><td>Required</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="nearby-api-with-category-request-example"></a><a href="#nearby-api-with-category-request-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nearby API with Category Request Example</h2>
+<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'https://barikoi.xyz/v2/api/search/nearby/category/API_KEY/1/10?longitude=90.36668110638857&amp;&amp;latitude=23.83723803415923&amp;ptype=office'</span>)
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+    .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error:'</span>, error))
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Success:'</span>, response))
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="example-response-1"></a><a href="#example-response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Response</h2>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"places"</span>: [
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">485763</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Mulytic Labs"</span>,
+            <span class="hljs-attr">"distance_in_meters"</span>: <span class="hljs-number">11.24627601291792</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.36672234535217"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.837144191228138"</span>,
+            <span class="hljs-attr">"Address"</span>: <span class="hljs-string">"Mulytic Labs, Jol Torongo, House 555, Road 9"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Mirpur Dohs"</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Office"</span>,
+            <span class="hljs-attr">"subType"</span>: <span class="hljs-string">"Branch Office"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"IDVH3378"</span>,
+            <span class="hljs-attr">"contact_person_phone"</span>: <span class="hljs-string">"+880-131-848-54"</span>,
+            <span class="hljs-attr">"ST_AsText(location)"</span>: <span class="hljs-string">"POINT(90.36672234535217 23.837144191228138)"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">515213</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Digitruck Bangladesh"</span>,
+            <span class="hljs-attr">"distance_in_meters"</span>: <span class="hljs-number">67.28097548803157</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.367076396942"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.837723194896"</span>,
+            <span class="hljs-attr">"Address"</span>: <span class="hljs-string">"Digitruck Bangladesh, House 625, Road 10"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Mirpur Dohs"</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Office"</span>,
+            <span class="hljs-attr">"subType"</span>: <span class="hljs-string">"Head Office"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"HNOM8349"</span>,
+            <span class="hljs-attr">"contact_person_phone"</span>: <span class="hljs-string">"01312 667373"</span>,
+            <span class="hljs-attr">"ST_AsText(location)"</span>: <span class="hljs-string">"POINT(90.367076396942 23.837723194896)"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">415887</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Acme Technologies Limited"</span>,
+            <span class="hljs-attr">"distance_in_meters"</span>: <span class="hljs-number">69.1944507498262</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.36733120679855"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.83742142635796"</span>,
+            <span class="hljs-attr">"Address"</span>: <span class="hljs-string">"Acme Technologies Limited, House 630, Road 9"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Mirpur Dohs"</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Office"</span>,
+            <span class="hljs-attr">"subType"</span>: <span class="hljs-string">"HEAD OFFICE"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"QMVA4960"</span>,
+            <span class="hljs-attr">"contact_person_phone"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"ST_AsText(location)"</span>: <span class="hljs-string">"POINT(90.36733120679855 23.83742142635796)"</span>
+        }
+        .......
+    ]
+}              
+</code></pre>
+<p>For each request of Nearby API with Category with all parameter 1 is counted.</p>
+<h2></h2>
+<p><code>GET</code> Nearby API with Multiple Types</p>
+<pre><code class="hljs">https://barikoi.xyz/v2/api/<span class="hljs-keyword">search</span>/nearby/multi/<span class="hljs-keyword">type</span>/API_KEY/DISTANCE/<span class="hljs-keyword">LIMIT</span>?q=PLACE_TYPES&amp;longitude=TARGET_LONGITUDE&amp;latitude=TARGET_LATITUDE
+</code></pre>
+<p>This returns data with specific <a href="https://barikoi.com/supported_place_types">place types</a></p>
+<h2><a class="anchor" aria-hidden="true" id="api-params-2"></a><a href="#api-params-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API PARAMS</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th style="text-align:center">Value</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>longitude</td><td style="text-align:center">90.36668110638857</td><td>Required</td></tr>
+<tr><td>latitude</td><td style="text-align:center">23.83723803415923</td><td>Required</td></tr>
+<tr><td>q</td><td style="text-align:center">atm,school</td><td>Required</td></tr>
+<tr><td>distance</td><td style="text-align:center">5 (km)</td><td>Required</td></tr>
+<tr><td>limit</td><td style="text-align:center">5</td><td>Required</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="nearby-api-with-multiple-types-request-example"></a><a href="#nearby-api-with-multiple-types-request-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nearby API with Multiple Types Request Example</h2>
+<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'https://barikoi.xyz/v2/api/search/nearby/multi/type/API_KEY/5/5?q=atm,school&amp;longitude=90.41634254157543&amp;latitude=23.832393074088362'</span>)
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+    .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error:'</span>, error))
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Success:'</span>, response))
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="example-response-2"></a><a href="#example-response-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Response</h2>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"places"</span>: [
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">502862</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Standard Chartered Bank (Scb) Atm"</span>,
+            <span class="hljs-attr">"distance_in_meters"</span>: <span class="hljs-number">253.05800281013194</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.418757200241"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.832941430342"</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Bank"</span>,
+            <span class="hljs-attr">"Address"</span>: <span class="hljs-string">"Standard Chartered Bank (Scb) Atm, Lotus Kamal Tower 1, New Airport Road, Nikunja 2"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Nikunja"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1229</span>,
+            <span class="hljs-attr">"subType"</span>: <span class="hljs-string">"ATM"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"UWZO0581"</span>,
+            <span class="hljs-attr">"ST_AsText(location)"</span>: <span class="hljs-string">"POINT(90.418757200241 23.832941430342)"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">119584</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Jane Alam Government High School"</span>,
+            <span class="hljs-attr">"distance_in_meters"</span>: <span class="hljs-number">264.91397210547393</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.41447706520559"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.830730510001846"</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Education"</span>,
+            <span class="hljs-attr">"Address"</span>: <span class="hljs-string">"Jane Alam Government High School, Tanpara, Nikunja 2"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Nikunja"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1229</span>,
+            <span class="hljs-attr">"subType"</span>: <span class="hljs-string">"SCHOOL"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"ABLE7705"</span>,
+            <span class="hljs-attr">"ST_AsText(location)"</span>: <span class="hljs-string">"POINT(90.41447706520559 23.830730510001846)"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">392671</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Genius Model School"</span>,
+            <span class="hljs-attr">"distance_in_meters"</span>: <span class="hljs-number">330.0645537248065</span>,
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">"90.41713178157806"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">"23.829513859028346"</span>,
+            <span class="hljs-attr">"pType"</span>: <span class="hljs-string">"Education"</span>,
+            <span class="hljs-attr">"Address"</span>: <span class="hljs-string">"Genius Model School, House 27, Road 04, Nikunja 2"</span>,
+            <span class="hljs-attr">"area"</span>: <span class="hljs-string">"Nikunja"</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Dhaka"</span>,
+            <span class="hljs-attr">"postCode"</span>: <span class="hljs-number">1229</span>,
+            <span class="hljs-attr">"subType"</span>: <span class="hljs-string">"SCHOOL"</span>,
+            <span class="hljs-attr">"uCode"</span>: <span class="hljs-string">"KUOX8155"</span>,
+            <span class="hljs-attr">"ST_AsText(location)"</span>: <span class="hljs-string">"POINT(90.41713178157806 23.829513859028346)"</span>
+        }
+        .......
+    ]
+}      
+</code></pre>
+<p>For each request of Nearby API with Multiple Types with all parameter 1 is counted.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/autocomplete"><span class="arrow-prev">← </span><span>Autocomplete</span></a><a class="docs-next button" href="/docs/distance"><span>Distance</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api-params">API PARAMS</a></li><li><a href="#nearby-api-request-example">Nearby API Request Example</a></li><li><a href="#example-response">Example Response</a></li><li><a href="#api-params-1">API PARAMS</a></li><li><a href="#nearby-api-with-category-request-example">Nearby API with Category Request Example</a></li><li><a href="#example-response-1">Example Response</a></li><li><a href="#api-params-2">API PARAMS</a></li><li><a href="#nearby-api-with-multiple-types-request-example">Nearby API with Multiple Types Request Example</a></li><li><a href="#example-response-2">Example Response</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2020 Barikoi Technologies Limited</section></footer></div></body></html>

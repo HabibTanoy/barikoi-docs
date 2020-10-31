@@ -1,0 +1,64 @@
+{
+  "docs": {
+    "Getting Started": ["intro"],
+    "Barikoi Places API": [
+      "rev-geo",
+      "geo-server",
+      "geo-code",
+      "autocomplete",
+      "nearby",
+      "distance",
+      "rupantor-geocoder",
+      "route-api",
+      "add-place",
+      "district",
+      "sub-district",
+      "city-api",
+      "union-api"
+    ],
+    "Barikoi Verify":[
+      "task-assign",
+      "request-revision",
+      "task-details",
+      "applications",
+      "application-details"
+    ],
+    "City Corporation API": [
+      "ward-by-location",
+      "zone-by-location",
+      "ward-zone-by-location",
+      "city-corp-by-location"
+    ]
+  },
+  "library": {
+    "Getting Started": ["library-intro"],
+    "Barikoi.JS": [
+      "search-js",
+      "geocoding-js",
+      "rev-geo-js",
+      "nearby-js",
+      "Autocomplete-js"
+    ]
+  },
+  "Android Library": {
+    "Getting Started": ["android-intro"],
+    "Location Library for Android": [
+      "android-project",
+      "android-location",
+      "android-token",
+      "android-search",
+      "android-geocoding",
+      "android-rev-geocoding",
+      "android-nearby"
+    ]
+  },
+  "Pricing": {
+    "Getting Started": ["pricing-intro", 
+      "pricing-general", 
+      "pricing-call",
+      "pricing-limit"],
+    "Billing Cycle": [
+      "pricing-details"
+    ]
+  }
+}
