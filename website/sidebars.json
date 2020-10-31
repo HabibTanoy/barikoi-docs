@@ -16,18 +16,20 @@
       "city-api",
       "union-api"
     ],
-    "Barikoi Verify":[
-      "task-assign",
-      "request-revision",
-      "task-details",
-      "applications",
-      "application-details"
-    ],
+    
     "City Corporation API": [
       "ward-by-location",
       "zone-by-location",
       "ward-zone-by-location",
       "city-corp-by-location"
+    ],
+    "Barikoi Verify":[
+      "verify-auth",
+      "verify-logout",
+      "verify-create",
+      "verify-applist",
+      "verify-app-details",
+      "verify-revision"
     ]
   },
   "library": {

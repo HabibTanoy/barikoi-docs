@@ -32,12 +32,6 @@
       "android-search": {
         "title": "Search"
       },
-      "application-details": {
-        "title": "Application Details"
-      },
-      "applications": {
-        "title": "Applications"
-      },
       "auth": {
         "title": "Authentication"
       },
@@ -117,9 +111,6 @@
       "pricing-limit": {
         "title": "What happens when i go over the call limit"
       },
-      "request-revision": {
-        "title": "Request Revision"
-      },
       "rev-geo-js": {
         "title": "Reverse Geocoding"
       },
@@ -141,14 +132,26 @@
       "sub-district": {
         "title": "Sub-District Api"
       },
-      "task-assign": {
-        "title": "Assign Task"
-      },
-      "task-details": {
-        "title": "Task Details"
-      },
       "union-api": {
         "title": "Union Api"
+      },
+      "verify-app-details": {
+        "title": "Application Details"
+      },
+      "verify-applist": {
+        "title": "Application List"
+      },
+      "verify-auth": {
+        "title": "Authenticate"
+      },
+      "verify-create": {
+        "title": "Create Application"
+      },
+      "verify-logout": {
+        "title": "Log Out"
+      },
+      "verify-revision": {
+        "title": "Request Revision"
       },
       "ward-by-location": {
         "title": "Ward by Geo location"
@@ -169,8 +172,8 @@
     "categories": {
       "Getting Started": "Getting Started",
       "Barikoi Places API": "Barikoi Places API",
-      "Barikoi Verify": "Barikoi Verify",
       "City Corporation API": "City Corporation API",
+      "Barikoi Verify": "Barikoi Verify",
       "Barikoi.JS": "Barikoi.JS",
       "Location Library for Android": "Location Library for Android",
       "Billing Cycle": "Billing Cycle"
