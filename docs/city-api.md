@@ -146,4 +146,4 @@ fetch('http://barikoi.xyz/v1/api/API_KEY/cities')
     "status": 200
 }
 ```
-For each request of City API with all parameter 0 is counted.
+```For each request of City API with all parameter 0 API call is counted.```

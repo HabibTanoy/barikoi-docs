@@ -28,9 +28,10 @@ fetch('https://barikoi.xyz/v1/api/search/dncc/API_KEY/90.4186194745721/23.831363
 
 ## Example Response
 
-```
+``` js
 {
-    "message": "DNCC"
+    "message": "DNCC",
+    "status": "200"
 }
 ```
-For each request of City Corporation by Geolocation API with all parameter 1 is counted.
+```For each request of City Corporation by Geolocation API with all parameter 1 API call is counted.```

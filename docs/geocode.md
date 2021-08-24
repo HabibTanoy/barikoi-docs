@@ -15,12 +15,12 @@ Geocode API for Developers. This returns location data of a specific place.
 
 | Parameter     | Value         | Action        |
 | ------------- |:-------------:| ------------- |
-| place_id      | 3354          |  Required     |
+| place_id      | 514148          |  Required     |
 
 ## Geocoding API Request Example
 
 ``` Js
-fetch('https://barikoi.xyz/v1/api/search/geocode/API_KEY/place/3354')
+fetch('https://barikoi.xyz/v1/api/search/geocode/API_KEY/place/514148')
     .then(response => response.json())
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response))
@@ -31,18 +31,18 @@ fetch('https://barikoi.xyz/v1/api/search/geocode/API_KEY/place/3354')
 ```
 {
     "place": {
-        "id": 3354,
-        "address": "Barikoi Office, House 192, Road 2",
-        "area": "Mirpur Dohs",
+        "id": 514148,
+        "address": "House 21, Road 1, Block KHA, Doaripara",
+        "area": "Mirpur",
         "city": "Dhaka",
         "postcode": 1216,
-        "ucode": "BKOI2017",
-        "longitude": "90.3673348642485",
-        "latitude": "23.8340107016275",
-        "pType": "Office",
-        "subType": "Head Office"
+        "ucode": "KYHG5779",
+        "longitude": "90.35798739641906",
+        "latitude": "23.825456535386472",
+        "pType": "Residential",
+        "subType": "HOUSE"
     },
     "status": 200
-}    
+}
 ```
-For each request of Geocoding API with all parameter 1 is counted.
+```For each request of Geocoding API with all parameter 1 API call is counted.```

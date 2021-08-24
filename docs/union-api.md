@@ -91,4 +91,4 @@ fetch('http://barikoi.xyz/v1/api/API_KEY/unions')
     "status": 200
 }
 ```
-For each request of Union API with all parameter 0 is counted.
+```For each request of Union API with all parameter 0 API call is counted.```

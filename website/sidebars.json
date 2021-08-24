@@ -14,22 +14,28 @@
       "district",
       "sub-district",
       "city-api",
-      "union-api"
+      "union-api",
+      "area-geolocation"
     ],
-    
+    "Barikoi Trace": [
+      "push-location",
+      "trace-pull",
+      "route-distance"
+    ],
+    "Barikoi Verify": [
+      "verify-autocomplete"
+    ],
+
     "City Corporation API": [
       "ward-by-location",
+      "ward-finding",
       "zone-by-location",
       "ward-zone-by-location",
       "city-corp-by-location"
     ],
-    "Barikoi Verify":[
-      "verify-auth",
-      "verify-logout",
-      "verify-create",
-      "verify-applist",
-      "verify-app-details",
-      "verify-revision"
+    "Supporting Links": [
+      "place-types",
+      "area-list"
     ]
   },
   "library": {
@@ -61,6 +67,32 @@
       "pricing-limit"],
     "Billing Cycle": [
       "pricing-details"
+    ]
+  },
+  "Maps API": {
+    "Getting Started": [
+      "map-add"
+    ],
+    "Example" : [
+      "custom-display",
+      "switchable-map",
+      "add-controls",
+      "add-marker",
+      "add-popup",
+      "marker-popup",
+      "marker-click",
+      "mouse-position",
+      "fly-location",
+      "fit-bound",
+      "measure-distance",
+      "measure-area",
+      "icon-layer",
+      "geojson-layer",
+      "context-menu",
+      "heatmap-layer"
+    ],
+    "API Reference": [
+      "bkoi-map"
     ]
   }
 }

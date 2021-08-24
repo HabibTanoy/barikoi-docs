@@ -10,7 +10,7 @@ This method performs location search using Barikoi Search API. It accepts two ar
 
 ## Example
 
-```
+``` js
 //  Search for 'cafe'
 
 Bkoi.search('cafe', response => console.log(response)) 

@@ -9,7 +9,7 @@ title: Zone by Geo location
 https://barikoi.xyz/v1/api/search/zone/API_KEY/LONGITUDE/LATITUDE
 ```
 
-Returns the ward of given longitude and latitude.
+Returns the zone of given longitude and latitude.
 
 ## API PARAMS
 
@@ -29,11 +29,11 @@ fetch('https://barikoi.xyz/v1/api/search/zone/API_KEY/90.4186194745721/23.831363
 
 ## Example Response
 
-```
+``` js
 [
     {
         "Zone": 1
     }
 ]
 ```
-For each request of Zone by Geolocation API with all parameter 1 is counted.
+```For each request of Zone by Geolocation API with all parameter 1 API call is counted.```

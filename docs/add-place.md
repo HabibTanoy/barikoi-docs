@@ -39,4 +39,4 @@ https://barikoi.xyz/v1/API_KEY/add/place
 }
 
 ```
-For each request of Add Place with all parameter 1 is counted.
+```For each request of Add Place with all parameter 1 API call is counted.```

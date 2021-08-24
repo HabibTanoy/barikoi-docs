@@ -36,4 +36,4 @@ fetch('https://barikoi.xyz/v1/api/search/ward/API_KEY/90.4186194745721/23.831363
     }
 ]   
 ```
-For each request of Ward by Geolocation API with all parameter 1 is counted.
+```For each request of Ward by Geolocation API with all parameter 1 API call is counted.```

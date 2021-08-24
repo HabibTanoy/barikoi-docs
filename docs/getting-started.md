@@ -12,7 +12,7 @@ Welcome to Barikoi API. Thank you for checking a Bangladeshi location data provi
 The currently listed Places API's are for autocomplete, post office autocomplete, geocoding, reverse geocoding, nearby, distance & rupantor geocoder. And City Corporation API's are Ward by Geolocation, Zone by Geolocation, Ward and Zone by Geolocation, City Corporation by Geolocation.
 
 ## Authentication
-API Key is needed to use all the API's. [Sign up](https://barikoi.com/signup). in Barikoi to get the API KEY.
+API Key is needed to use all the API's. [Sign up](https://developer.barikoi.com/register). in Barikoi to get the API KEY.
 
 ## Error Codes
 
@@ -58,3 +58,6 @@ A single API request and a single API call are not always the same. A single API
 For instance, A single request to Rupantor API results in two API calls since Rupantor API uses geocode API to operate. Routing API follows the same formalities as Rupantor. 
 
 For any query or tech support please mail at support@barikoi.com
+
+
+

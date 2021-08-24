@@ -11,7 +11,7 @@ The Barikoi Location Library for Android is our location search library for Andr
 
 Here's what you'll need to get started:
 
-* A Barikoi account and access token. Sign up for an account [here](https://barikoi.com/signup). You can find your access tokens on your Account page.
+* A Barikoi account and access token. Sign up for an account [here](https://developer.barikoi.com/register). You can find your access tokens on your Account page.
 
 * Android Studio. You can download Android Studio for free from Google. In order to install the Barikoi Location Library for Android, you'll need to first download Android Studio and create a project with an empty activity.
 

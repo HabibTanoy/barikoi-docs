@@ -10,7 +10,7 @@ This method performs location search using Barikoi Geocode API. It accepts a and
 
 ## Example
 
-```
+``` js
 //  Get Geo Address
 
 Bkoi.geocode(147, response => console.log(JSON.parse(response)))

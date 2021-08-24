@@ -6,7 +6,7 @@ title: Nearby
 ```GET``` Nearby API
 
 ```
-https://barikoi.xyz/v2/api/search/nearby/API_KEY/DISTANCE/LIMIT?longitude=TARGET_LONGITUDE&latitude=TARGET_LATITUDE
+https://barikoi.xyz/v2/api/search/nearby/API_KEY/0.5/10?longitude=90.36668110638857&latitude=23.83723803415923
 ```
 All Nearby API counts according to the limit parameter or number of places returned in response data
 
@@ -80,18 +80,18 @@ fetch('https://barikoi.xyz/v2/api/search/nearby/API_KEY/0.5/10?longitude=90.3666
     ]
 }         
 ```
-For each request of Nearby API with all parameter 1 is counted.
+
 
 ##
 ``` GET``` Nearby API with Category
 
-```
-https://barikoi.xyz/v2/api/search/nearby/category/API_KEY/DISTANCE/LIMIT?longitude=TARGET_LONGITUDE&latitude=TARGET_LATITUDE&ptype=CATEGORY
+``` js
+https://barikoi.xyz/v2/api/search/nearby/category/API_KEY/1/10?longitude=90.36668110638857&&latitude=23.83723803415923&ptype=office
 ```
 This returns data with the specific pTypes from the list below:
  
 
-|         |          pTypes         |         |
+|               |          pTypes         |         |
 | ------------- |:-------------:          | ------------- |
 | Admin         | Fuel                    |  Others     |
 | Agricultural  | Government              |  Recreation     | 
@@ -173,15 +173,15 @@ fetch('https://barikoi.xyz/v2/api/search/nearby/category/API_KEY/1/10?longitude=
     ]
 }              
 ```
-For each request of Nearby API with Category with all parameter 1 is counted.
+
 
 ##
 ```GET``` Nearby API with Multiple Types
 
+``` js
+https://barikoi.xyz/v2/api/search/nearby/multi/type/API_KEY/5/5?q=atm,school&longitude=90.41634254157543&latitude=23.832393074088362
 ```
-https://barikoi.xyz/v2/api/search/nearby/multi/type/API_KEY/DISTANCE/LIMIT?q=PLACE_TYPES&longitude=TARGET_LONGITUDE&latitude=TARGET_LATITUDE
-```
-This returns data with specific [place types](https://barikoi.com/supported_place_types)
+This returns data with specific [place types](https://docs.barikoi.com/docs/place-types)
 
 ## API PARAMS
 
@@ -255,4 +255,3 @@ fetch('https://barikoi.xyz/v2/api/search/nearby/multi/type/API_KEY/5/5?q=atm,sch
     ]
 }      
 ```
-For each request of Nearby API with Multiple Types with all parameter 1 is counted.

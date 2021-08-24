@@ -35,4 +35,4 @@ fetch('https://barikoi.xyz/v1/api/distance/API_KEY/90.39534587,23.86448886/90.36
     "status": 200
 }   
 ```      
-For each request of Distance API with all parameter 1 is counted.
+```For each request of Distance API with all parameter 1 API call is counted.```

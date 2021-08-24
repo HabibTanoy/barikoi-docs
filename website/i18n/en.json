@@ -5,8 +5,17 @@
     "previous": "Previous",
     "tagline": "Documentation",
     "docs": {
+      "add-controls": {
+        "title": "Add Map Controls"
+      },
+      "add-marker": {
+        "title": "Add Marker"
+      },
       "add-place": {
         "title": "Add Place"
+      },
+      "add-popup": {
+        "title": "Add Popup"
       },
       "android-token": {
         "title": "Get an access token"
@@ -32,6 +41,12 @@
       "android-search": {
         "title": "Search"
       },
+      "area-geolocation": {
+        "title": "Area API"
+      },
+      "area-list": {
+        "title": "Area List"
+      },
       "auth": {
         "title": "Authentication"
       },
@@ -41,11 +56,26 @@
       "autocomplete": {
         "title": "Autocomplete"
       },
+      "bkoi-map": {
+        "title": "Map"
+      },
       "city-api": {
         "title": "City Api"
       },
+      "city-autocomplete": {
+        "title": "City"
+      },
       "city-corp-by-location": {
         "title": "City Corporation by Geolocation"
+      },
+      "city-list": {
+        "title": "City List"
+      },
+      "context-menu": {
+        "title": "Context Menu"
+      },
+      "custom-display": {
+        "title": "Display Custom Map Style"
       },
       "distance": {
         "title": "Distance"
@@ -63,6 +93,12 @@
       "doc3": {
         "title": "This is document number 3"
       },
+      "fit-bound": {
+        "title": "Fit Bounds"
+      },
+      "fly-location": {
+        "title": "Fly To Location"
+      },
       "geo-server": {
         "title": "Reverse Geocoding (Server)"
       },
@@ -72,11 +108,20 @@
       "geocoding-js": {
         "title": "Geocoding"
       },
+      "geojson-layer": {
+        "title": "GeoJSON Layer"
+      },
       "intro": {
         "title": "Barikoi Places API"
       },
+      "heatmap-layer": {
+        "title": "Heatmap Layer"
+      },
       "help": {
         "title": "Help"
+      },
+      "icon-layer": {
+        "title": "Icon Layer"
       },
       "library-how-to-js": {
         "title": "Integrating into web page"
@@ -87,17 +132,38 @@
       "library": {
         "title": "Library"
       },
+      "map-add": {
+        "title": "Display Bkoi GL JS Map"
+      },
+      "marker-click": {
+        "title": "Add Marker on Map Click"
+      },
+      "marker-popup": {
+        "title": "Add Popup to Marker"
+      },
+      "measure-area": {
+        "title": "Measure Polygon Area"
+      },
+      "measure-distance": {
+        "title": "Measure Distance"
+      },
+      "mouse-position": {
+        "title": "Get Mouse Position"
+      },
       "nearby-js": {
         "title": "Nearby"
       },
       "nearby": {
         "title": "Nearby"
       },
+      "place-types": {
+        "title": "Places Type"
+      },
       "post-auto": {
         "title": "Post Office Autocomplete"
       },
       "pricing-call": {
-        "title": "API usage and pricing clearification"
+        "title": "API usage and pricing clarification"
       },
       "pricing-details": {
         "title": "Billing Cycle"
@@ -111,14 +177,17 @@
       "pricing-limit": {
         "title": "What happens when i go over the call limit"
       },
+      "push-location": {
+        "title": "Push Location Data"
+      },
       "rev-geo-js": {
         "title": "Reverse Geocoding"
       },
       "rev-geo": {
         "title": "Reverse Geocode"
       },
-      "rev-geocoding-js": {
-        "title": "rev-geocoding-js"
+      "route-distance": {
+        "title": "User Route and Distance"
       },
       "route-api": {
         "title": "Routing Api"
@@ -132,29 +201,26 @@
       "sub-district": {
         "title": "Sub-District Api"
       },
+      "switchable-map": {
+        "title": "Switchable Map Style"
+      },
+      "trace-pull": {
+        "title": "Users Current Position"
+      },
+      "traffic-layer": {
+        "title": "Traffic Layer"
+      },
       "union-api": {
         "title": "Union Api"
       },
-      "verify-app-details": {
-        "title": "Application Details"
-      },
-      "verify-applist": {
-        "title": "Application List"
-      },
-      "verify-auth": {
-        "title": "Authenticate"
-      },
-      "verify-create": {
-        "title": "Create Application"
-      },
-      "verify-logout": {
-        "title": "Log Out"
-      },
-      "verify-revision": {
-        "title": "Request Revision"
+      "verify-autocomplete": {
+        "title": "Autocomplete"
       },
       "ward-by-location": {
         "title": "Ward by Geo location"
+      },
+      "ward-finding": {
+        "title": "Get Ward geometry"
       },
       "ward-zone-by-location": {
         "title": "Ward & Zone by Geolocation"
@@ -165,6 +231,7 @@
     },
     "links": {
       "API": "API",
+      "Maps API": "Maps API",
       "JavaScript Library": "JavaScript Library",
       "Android Location Library": "Android Location Library",
       "Pricing": "Pricing"
@@ -172,11 +239,15 @@
     "categories": {
       "Getting Started": "Getting Started",
       "Barikoi Places API": "Barikoi Places API",
-      "City Corporation API": "City Corporation API",
+      "Barikoi Trace": "Barikoi Trace",
       "Barikoi Verify": "Barikoi Verify",
+      "City Corporation API": "City Corporation API",
+      "Supporting Links": "Supporting Links",
       "Barikoi.JS": "Barikoi.JS",
       "Location Library for Android": "Location Library for Android",
-      "Billing Cycle": "Billing Cycle"
+      "Billing Cycle": "Billing Cycle",
+      "Example": "Example",
+      "API Reference": "API Reference"
     }
   },
   "pages-strings": {
