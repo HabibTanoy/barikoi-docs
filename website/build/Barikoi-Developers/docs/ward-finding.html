@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Get Ward geometry · Barikoi</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Get Ward geometry · Barikoi"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="## "/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Barikoi</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/intro" target="_self">API</a></li><li class=""><a href="/docs/map-add" target="_self">Maps API</a></li><li class=""><a href="/docs/library-intro" target="_self">JavaScript Library</a></li><li class=""><a href="/docs/android-intro" target="_self">Android Location Library</a></li><li class=""><a href="/docs/pricing-intro" target="_self">Pricing</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>City Corporation API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Barikoi Places API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Places API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/rev-geo">Reverse Geocode</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-server">Reverse Geocoding (Server)</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-code">Geocoding</a></li><li class="navListItem"><a class="navItem" href="/docs/autocomplete">Autocomplete</a></li><li class="navListItem"><a class="navItem" href="/docs/nearby">Nearby</a></li><li class="navListItem"><a class="navItem" href="/docs/distance">Distance</a></li><li class="navListItem"><a class="navItem" href="/docs/rupantor-geocoder">Rupantor Geocoder</a></li><li class="navListItem"><a class="navItem" href="/docs/route-api">Routing Api</a></li><li class="navListItem"><a class="navItem" href="/docs/add-place">Add Place</a></li><li class="navListItem"><a class="navItem" href="/docs/district">District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/sub-district">Sub-District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/city-api">City Api</a></li><li class="navListItem"><a class="navItem" href="/docs/union-api">Union Api</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Trace</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/push-location">Push Location Data</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-pull">Users Current Position</a></li><li class="navListItem"><a class="navItem" href="/docs/route-distance">User Route and Distance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Verify</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/verify-autocomplete">Autocomplete</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">City Corporation API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/ward-by-location">Ward by Geo location</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ward-finding">Get Ward geometry</a></li><li class="navListItem"><a class="navItem" href="/docs/zone-by-location">Zone by Geo location</a></li><li class="navListItem"><a class="navItem" href="/docs/ward-zone-by-location">Ward &amp; Zone by Geolocation</a></li><li class="navListItem"><a class="navItem" href="/docs/city-corp-by-location">City Corporation by Geolocation</a></li><li class="navListItem"><a class="navItem" href="/docs/area-geolocation">Area API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Supporting Links</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/place-types">Places Type</a></li><li class="navListItem"><a class="navItem" href="/docs/area-list">Area List</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Get Ward geometry</h1></header><article><div><span><h2></h2>
+<p><code>GET</code> Get Ward geometry Api</p>
+<pre><code class="hljs">http:<span class="hljs-regexp">//</span>barikoi.xyz<span class="hljs-regexp">/v2/</span>api<span class="hljs-regexp">/search/g</span>et<span class="hljs-regexp">/ward/g</span>eometry?api_key=API_KEY&amp;ward_number=<span class="hljs-number">1</span>
+</code></pre>
+<p>Returns the ward geometry of requested ward number.</p>
+<h2><a class="anchor" aria-hidden="true" id="api-params"></a><a href="#api-params" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API PARAMS</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th style="text-align:center">Value</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>api_key</td><td style="text-align:center">{api key}</td><td>Required</td></tr>
+<tr><td>ward_number</td><td style="text-align:center">1</td><td>Required</td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'http://barikoi.xyz/v2/api/search/get/ward/geometry?api_key=API_KEY&amp;ward_number=1'</span>)
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+    .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error:'</span>, error))
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Success:'</span>, response))
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="example-response"></a><a href="#example-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Response</h2>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"ward"</span>: {
+        <span class="hljs-string">"ward_number"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">"geometry"</span>: <span class="hljs-string">"{\"type\": \"Polygon\", \"coordinates\": [[[90.395765, 23.880673], [90.395486, 23.880587], [90.395199, 23.880499], [90.394825, 23.880318], [90.39445, 23.880139], [90.394231, 23.880002], [90.393792, 23.879721], [90.394104, 23.879343], [90.394381, 23.879353], [90.394519, 23.879359], [90.394656, 23.879367], [90.394671, 23.879204], [90.39479, 23.879186], [90.394927, 23.879118], [90.395018, 23.879017], [90.395009, 23.878888], [90.394955, 23.878854], [90.394924, 23.878739], [90.394895, 23.878625], [90.394941, 23.878589], [90.39481, 23.878078], [90.394669, 23.877563], [90.394723, 23.877336], [90.394861, 23.877183], [90.394957, 23.87692], [90.39508, 23.876852], [90.395148, 23.876782], [90.395253, 23.876728], [90.395438, 23.876224], [90.395422, 23.875748], [90.395417, 23.875586], [90.395255, 23.875508], [90.395128, 23.875336], [90.395083, 23.875276], [90.394934, 23.875201], [90.39476, 23.875113], [90.394668, 23.87487], [90.394493, 23.874807], [90.394296, 23.87458], [90.393929, 23.874515], [90.39353, 23.874066], [90.393542, 23.87095], [90.393547, 23.870325], [90.39337, 23.869976], [90.39313, 23.869629], [90.39307, 23.869282], [90.39317, 23.869273], [90.393375, 23.8692], [90.393379, 23.868696], [90.393386, 23.867963], [90.393392, 23.86761], [90.393218, 23.867495], [90.393229, 23.867278], [90.393235, 23.867143], [90.393241, 23.86704], [90.393232, 23.866994], [90.393223, 23.86695], [90.393276, 23.866674], [90.393186, 23.866604], [90.393258, 23.866386], [90.393342, 23.86618], [90.393346, 23.865957], [90.39328, 23.865825], [90.393278, 23.865243], [90.393337, 23.865055], [90.393397, 23.864868], [90.393249, 23.864737], [90.393347, 23.864379], [90.393292, 23.863793], [90.39319, 23.862871], [90.393031, 23.862725], [90.393042, 23.862473], [90.393059, 23.862244], [90.393142, 23.861772], [90.39329, 23.861558], [90.394239, 23.861372], [90.39488, 23.861232], [90.395197, 23.86119], [90.397278, 23.860898], [90.398244, 23.85979], [90.399177, 23.858681], [90.401108, 23.856395], [90.402718, 23.85557], [90.404273, 23.854727], [90.404863, 23.854746], [90.406677, 23.854197], [90.406516, 23.858337], [90.40628, 23.863234], [90.406065, 23.868036], [90.405974, 23.870293], [90.405888, 23.872594], [90.405877, 23.873928], [90.405909, 23.875272], [90.405947, 23.87898], [90.405952, 23.880319], [90.405974, 23.88164], [90.40568, 23.881752], [90.4055, 23.881819], [90.405435, 23.881817], [90.405431, 23.881887], [90.405366, 23.881888], [90.405358, 23.881817], [90.404893, 23.881779], [90.403852, 23.881759], [90.403275, 23.881757], [90.40308, 23.881749], [90.402836, 23.881781], [90.402683, 23.881752], [90.40224, 23.881732], [90.401771, 23.881698], [90.400969, 23.881634], [90.400033, 23.881453], [90.399437, 23.881342], [90.398439, 23.881124], [90.397922, 23.881014], [90.397404, 23.880933], [90.396535, 23.880798], [90.395765, 23.880673]]]}"</span>
+    },
+    <span class="hljs-string">"status"</span>: <span class="hljs-number">200</span>
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ward-by-location"><span class="arrow-prev">← </span><span>Ward by Geo location</span></a><a class="docs-next button" href="/docs/zone-by-location"><span>Zone by Geo location</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api-params">API PARAMS</a></li><li><a href="#example-response">Example Response</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2021 Barikoi Technologies Limited</section></footer></div></body></html>

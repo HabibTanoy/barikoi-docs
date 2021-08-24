@@ -1,0 +1,378 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>User Route and Distance · Barikoi</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="##"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="User Route and Distance · Barikoi"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="##"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Barikoi</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/intro" target="_self">API</a></li><li class=""><a href="/docs/map-add" target="_self">Maps API</a></li><li class=""><a href="/docs/library-intro" target="_self">JavaScript Library</a></li><li class=""><a href="/docs/android-intro" target="_self">Android Location Library</a></li><li class=""><a href="/docs/pricing-intro" target="_self">Pricing</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Barikoi Trace</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Barikoi Places API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Places API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/rev-geo">Reverse Geocode</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-server">Reverse Geocoding (Server)</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-code">Geocoding</a></li><li class="navListItem"><a class="navItem" href="/docs/autocomplete">Autocomplete</a></li><li class="navListItem"><a class="navItem" href="/docs/nearby">Nearby</a></li><li class="navListItem"><a class="navItem" href="/docs/distance">Distance</a></li><li class="navListItem"><a class="navItem" href="/docs/rupantor-geocoder">Rupantor Geocoder</a></li><li class="navListItem"><a class="navItem" href="/docs/route-api">Routing Api</a></li><li class="navListItem"><a class="navItem" href="/docs/add-place">Add Place</a></li><li class="navListItem"><a class="navItem" href="/docs/district">District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/sub-district">Sub-District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/city-api">City Api</a></li><li class="navListItem"><a class="navItem" href="/docs/union-api">Union Api</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Trace</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/push-location">Push Location Data</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-pull">Users Current Position</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/route-distance">User Route and Distance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Verify</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/verify-autocomplete">Autocomplete</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">City Corporation API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/ward-by-location">Ward by Geo location</a></li><li class="navListItem"><a class="navItem" href="/docs/ward-finding">Get Ward geometry</a></li><li class="navListItem"><a class="navItem" href="/docs/zone-by-location">Zone by Geo location</a></li><li class="navListItem"><a class="navItem" href="/docs/ward-zone-by-location">Ward &amp; Zone by Geolocation</a></li><li class="navListItem"><a class="navItem" href="/docs/city-corp-by-location">City Corporation by Geolocation</a></li><li class="navListItem"><a class="navItem" href="/docs/area-geolocation">Area API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Supporting Links</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/place-types">Places Type</a></li><li class="navListItem"><a class="navItem" href="/docs/area-list">Area List</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">User Route and Distance</h1></header><article><div><span><h2></h2>
+<p><code>GET</code> User Route and Distance</p>
+<pre><code class="hljs"><span class="hljs-symbol">https:</span><span class="hljs-comment">//barikoi.xyz/v1/api/trace/user/route</span>
+</code></pre>
+<p>This api provides a user’s either all the routes (in linestring json format) along with each route’s distance(unit in meter) or total distance(unit in meter) of all the routes between given the start time and end time.
+<br></p>
+<p>Start_time ,end_time ,user_id ,api_key ,path are required to make this get request.
+<br></p>
+<p>To determine api’s response this api takes a parameter ‘path’ , it’s value can be either true or false. If true is set to path parameter api wil return all the routes (in linestring json format) along with each route’s distance(unit in meter) and if false is set to path parameter api will return total distance(unit in meter) of all the routes between given the start time and end time.</p>
+<h2><a class="anchor" aria-hidden="true" id="api-params"></a><a href="#api-params" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API PARAMS</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th style="text-align:center">Value</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>start_time</td><td style="text-align:center">2021-04-03 16:00:07</td><td>Required</td></tr>
+<tr><td>end_time</td><td style="text-align:center">2021-04-10 16:00:07</td><td>Required</td></tr>
+<tr><td>user_id</td><td style="text-align:center">1</td><td>Required</td></tr>
+<tr><td>api_key</td><td style="text-align:center">{api_key}</td><td>Required</td></tr>
+<tr><td>path</td><td style="text-align:center">true or false</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="user-route-and-distance-api-request-example"></a><a href="#user-route-and-distance-api-request-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Route and Distance API Request Example</h2>
+<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'https://barikoi.xyz/v1/api/trace/user/route?start_time=2021-04-03 16:00:07&amp;end_time=2021-04-10 16:00:07&amp;user_id=1&amp;api_key={api_key}&amp;path=true'</span>)
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+    .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error:'</span>, error))
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Success:'</span>, response))
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="example-response"></a><a href="#example-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Response</h2>
+<p>For <code>false</code> value</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"data"</span>: {
+        <span class="hljs-attr">"total_distance"</span>: <span class="hljs-number">44849.628812269635</span>
+    },
+    <span class="hljs-attr">"status"</span>: <span class="hljs-number">200</span>
+}
+</code></pre>
+<p>For <code>true</code> value</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"data"</span>: {
+        <span class="hljs-attr">"total_distance"</span>: <span class="hljs-number">44849.628812269635</span>,
+        <span class="hljs-attr">"paths"</span>: [
+            {
+                <span class="hljs-attr">"geo_json"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"LineString"</span>,
+                    <span class="hljs-attr">"coordinates"</span>: [
+                        [
+                            <span class="hljs-number">90.3899658</span>,
+                            <span class="hljs-number">23.8163546</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3899658</span>,
+                            <span class="hljs-number">23.8163546</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3899103</span>,
+                            <span class="hljs-number">23.8162896</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3899243</span>,
+                            <span class="hljs-number">23.8162962</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3899243</span>,
+                            <span class="hljs-number">23.8162962</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.389893</span>,
+                            <span class="hljs-number">23.816365</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3898205</span>,
+                            <span class="hljs-number">23.8163224</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3896988</span>,
+                            <span class="hljs-number">23.816329</span>
+                        ],
+                       .................
+                    ]
+                },
+                <span class="hljs-attr">"distance"</span>: <span class="hljs-number">3894.422219711506</span>
+            },
+            {
+                <span class="hljs-attr">"geo_json"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"LineString"</span>,
+                    <span class="hljs-attr">"coordinates"</span>: [
+                        [
+                            <span class="hljs-number">90.3997324</span>,
+                            <span class="hljs-number">23.7637859</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.39976</span>,
+                            <span class="hljs-number">23.763711</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3997948</span>,
+                            <span class="hljs-number">23.7637778</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3998058</span>,
+                            <span class="hljs-number">23.7638069</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3997738</span>,
+                            <span class="hljs-number">23.763782</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3997588</span>,
+                            <span class="hljs-number">23.7637714</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3997564</span>,
+                            <span class="hljs-number">23.7638692</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3998379</span>,
+                            <span class="hljs-number">23.7638768</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3999012</span>,
+                            <span class="hljs-number">23.7638976</span>
+                        ],
+                       .................
+                    ]
+                },
+                <span class="hljs-attr">"distance"</span>: <span class="hljs-number">6851.779026333792</span>
+            },
+            {
+                <span class="hljs-attr">"geo_json"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"LineString"</span>,
+                    <span class="hljs-attr">"coordinates"</span>: [
+                        [
+                            <span class="hljs-number">90.3766652</span>,
+                            <span class="hljs-number">23.8230482</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3766349</span>,
+                            <span class="hljs-number">23.8230416</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3766148</span>,
+                            <span class="hljs-number">23.8230067</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3765054</span>,
+                            <span class="hljs-number">23.8229733</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3762359</span>,
+                            <span class="hljs-number">23.8229212</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3758691</span>,
+                            <span class="hljs-number">23.8229222</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3756086</span>,
+                            <span class="hljs-number">23.8228644</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3755076</span>,
+                            <span class="hljs-number">23.8228317</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3752925</span>,
+                            <span class="hljs-number">23.8227868</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3751002</span>,
+                            <span class="hljs-number">23.8227809</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3747993</span>,
+                            <span class="hljs-number">23.8227232</span>
+                        ],
+                      ................
+                    ]
+                },
+                <span class="hljs-attr">"distance"</span>: <span class="hljs-number">5485.428007188529</span>
+            },
+            {
+                <span class="hljs-attr">"geo_json"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"LineString"</span>,
+                    <span class="hljs-attr">"coordinates"</span>: [
+                        [
+                            <span class="hljs-number">90.3937594</span>,
+                            <span class="hljs-number">23.8215306</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3937697</span>,
+                            <span class="hljs-number">23.8215171</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3937789</span>,
+                            <span class="hljs-number">23.8215214</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3938083</span>,
+                            <span class="hljs-number">23.821332</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.393831</span>,
+                            <span class="hljs-number">23.8211848</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3937918</span>,
+                            <span class="hljs-number">23.8214345</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3937826</span>,
+                            <span class="hljs-number">23.8215067</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3938049</span>,
+                            <span class="hljs-number">23.8214827</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3938165</span>,
+                            <span class="hljs-number">23.8214075</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3937806</span>,
+                            <span class="hljs-number">23.8215061</span>
+                        ],
+                        .............
+                    ]
+                },
+                <span class="hljs-attr">"distance"</span>: <span class="hljs-number">10091.098819319852</span>
+            },
+            {
+                <span class="hljs-attr">"geo_json"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"LineString"</span>,
+                    <span class="hljs-attr">"coordinates"</span>: [
+                        [
+                            <span class="hljs-number">90.3598612</span>,
+                            <span class="hljs-number">23.809024</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3598521</span>,
+                            <span class="hljs-number">23.8090342</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3598667</span>,
+                            <span class="hljs-number">23.809022</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3598909</span>,
+                            <span class="hljs-number">23.8090478</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3598991</span>,
+                            <span class="hljs-number">23.8090541</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3599079</span>,
+                            <span class="hljs-number">23.8090605</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.35993</span>,
+                            <span class="hljs-number">23.8090768</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3601519</span>,
+                            <span class="hljs-number">23.80908</span>
+                        ],
+                      ................
+                    ]
+                },
+                <span class="hljs-attr">"distance"</span>: <span class="hljs-number">11025.259591191956</span>
+            },
+            {
+                <span class="hljs-attr">"geo_json"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"LineString"</span>,
+                    <span class="hljs-attr">"coordinates"</span>: [
+                        [
+                            <span class="hljs-number">90.3927005</span>,
+                            <span class="hljs-number">23.8121105</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.392699</span>,
+                            <span class="hljs-number">23.8121046</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3926925</span>,
+                            <span class="hljs-number">23.8121048</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3926833</span>,
+                            <span class="hljs-number">23.8121046</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.392658</span>,
+                            <span class="hljs-number">23.8121146</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3926267</span>,
+                            <span class="hljs-number">23.8121372</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3926096</span>,
+                            <span class="hljs-number">23.8121628</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3925964</span>,
+                            <span class="hljs-number">23.8121725</span>
+                        ],
+                        [
+                            <span class="hljs-number">90.3925693</span>,
+                            <span class="hljs-number">23.8121727</span>
+                        ],
+                       ...........
+                    ]
+                },
+                <span class="hljs-attr">"distance"</span>: <span class="hljs-number">7501.641148524003</span>
+            }
+        ]
+    },
+    <span class="hljs-attr">"status"</span>: <span class="hljs-number">200</span>
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/trace-pull"><span class="arrow-prev">← </span><span>Users Current Position</span></a><a class="docs-next button" href="/docs/verify-autocomplete"><span>Autocomplete</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api-params">API PARAMS</a></li><li><a href="#user-route-and-distance-api-request-example">User Route and Distance API Request Example</a></li><li><a href="#example-response">Example Response</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2021 Barikoi Technologies Limited</section></footer></div></body></html>

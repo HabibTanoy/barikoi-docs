@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Places Type · Barikoi</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Places Type"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Places Type · Barikoi"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="## Places Type"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Barikoi</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/intro" target="_self">API</a></li><li class=""><a href="/docs/map-add" target="_self">Maps API</a></li><li class=""><a href="/docs/library-intro" target="_self">JavaScript Library</a></li><li class=""><a href="/docs/android-intro" target="_self">Android Location Library</a></li><li class=""><a href="/docs/pricing-intro" target="_self">Pricing</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Supporting Links</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Barikoi Places API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Places API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/rev-geo">Reverse Geocode</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-server">Reverse Geocoding (Server)</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-code">Geocoding</a></li><li class="navListItem"><a class="navItem" href="/docs/autocomplete">Autocomplete</a></li><li class="navListItem"><a class="navItem" href="/docs/nearby">Nearby</a></li><li class="navListItem"><a class="navItem" href="/docs/distance">Distance</a></li><li class="navListItem"><a class="navItem" href="/docs/rupantor-geocoder">Rupantor Geocoder</a></li><li class="navListItem"><a class="navItem" href="/docs/route-api">Routing Api</a></li><li class="navListItem"><a class="navItem" href="/docs/add-place">Add Place</a></li><li class="navListItem"><a class="navItem" href="/docs/district">District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/sub-district">Sub-District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/city-api">City Api</a></li><li class="navListItem"><a class="navItem" href="/docs/union-api">Union Api</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Trace</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/push-location">Push Location Data</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-pull">Users Current Position</a></li><li class="navListItem"><a class="navItem" href="/docs/route-distance">User Route and Distance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Verify</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/verify-autocomplete">Autocomplete</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">City Corporation API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/ward-by-location">Ward by Geo location</a></li><li class="navListItem"><a class="navItem" href="/docs/ward-finding">Get Ward geometry</a></li><li class="navListItem"><a class="navItem" href="/docs/zone-by-location">Zone by Geo location</a></li><li class="navListItem"><a class="navItem" href="/docs/ward-zone-by-location">Ward &amp; Zone by Geolocation</a></li><li class="navListItem"><a class="navItem" href="/docs/city-corp-by-location">City Corporation by Geolocation</a></li><li class="navListItem"><a class="navItem" href="/docs/area-geolocation">Area API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Supporting Links</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/place-types">Places Type</a></li><li class="navListItem"><a class="navItem" href="/docs/area-list">Area List</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Places Type</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="places-type"></a><a href="#places-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Places Type</h2>
+<h2><a class="anchor" aria-hidden="true" id="all-ptypes"></a><a href="#all-ptypes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>All pTypes</h2>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">pTypes</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Admin</td><td>Fuel</td><td style="text-align:center">Others</td><td>Agricultural</td><td>Government</td></tr>
+<tr><td>Recreation</td><td>Bank</td><td style="text-align:center">Healthcare</td><td>Religious Place</td><td>Commercial</td></tr>
+<tr><td>Hotel</td><td>Residential</td><td style="text-align:center">Construction</td><td>Industry</td><td>Shop</td></tr>
+<tr><td>Education</td><td>Landmark</td><td style="text-align:center">Transportation</td><td>Food</td><td>Office</td></tr>
+<tr><td>Utility</td><td></td><td style="text-align:center"></td><td></td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="all-subtypes"></a><a href="#all-subtypes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>All subTypes</h2>
+<ul>
+<li>Subtypes of <strong>Admin</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Admin</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Area</td><td>District</td><td style="text-align:center">Sub District</td><td>Subarea</td><td>Supersubarea</td></tr>
+<tr><td>Union</td><td>Village</td><td style="text-align:center"></td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Agricultural</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th style="text-align:center">Agricultural</th></tr>
+</thead>
+<tbody>
+<tr><td>Cattle Farm</td><td style="text-align:center">Fruits Garden</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Bank</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th style="text-align:center"></th><th style="text-align:center">Bank</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Agent</td><td style="text-align:center">ATM</td><td style="text-align:center">Bank Branch</td><td>Bank Head Office</td><td>Bank Office</td></tr>
+<tr><td>CDM</td><td style="text-align:center">Corporate Branch</td><td style="text-align:center">Sub Branch</td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Commercial</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th style="text-align:center"></th><th style="text-align:center">Commercial</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Bazaar</td><td style="text-align:center">Car Showroom</td><td style="text-align:center">Commercial Building</td><td>Commercial Land</td><td>Courier Service</td></tr>
+<tr><td>Gym</td><td style="text-align:center">Hat Bazar</td><td style="text-align:center">Internet Service Provider</td><td>Market</td><td>Motorcycle Showroom</td></tr>
+<tr><td>Security Service</td><td style="text-align:center">Service Center</td><td style="text-align:center">Shopping Mall</td><td>Showroom</td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Construction</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th style="text-align:center"></th><th style="text-align:center">Construction</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Aluminum</td><td style="text-align:center">Bamboo Shop</td><td style="text-align:center">Brick</td><td>Cement</td><td>Ceramics</td></tr>
+<tr><td>Door</td><td style="text-align:center">Glass</td><td style="text-align:center">Hardware</td><td>Metal</td><td>Paint</td></tr>
+<tr><td>Rod</td><td style="text-align:center">Sanitary</td><td style="text-align:center">Steel</td><td>Stone</td><td>Tiles</td></tr>
+<tr><td>Wood</td><td style="text-align:center"></td><td style="text-align:center"></td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Education</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th style="text-align:center"></th><th style="text-align:center">Education</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Academic Building</td><td style="text-align:center">Art School</td><td style="text-align:center">Coaching Center</td><td>College</td><td>Dance School</td></tr>
+<tr><td>Daycare</td><td style="text-align:center">Dental College</td><td style="text-align:center">Driving School</td><td>Kindergarten</td><td>Library</td></tr>
+<tr><td>Madrasha</td><td style="text-align:center">Medical College</td><td style="text-align:center">Music School</td><td>Polytechnic Institute</td><td>Research Center</td></tr>
+<tr><td>School</td><td style="text-align:center">Special School</td><td style="text-align:center">Training Institute</td><td>University</td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Food</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th style="text-align:center"></th><th style="text-align:center">Food</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Arabian Restaurant</td><td style="text-align:center">Bakery</td><td style="text-align:center">Bangla Restaurant</td><td>Bar</td><td>Bar-B-Q</td></tr>
+<tr><td>Biryani House</td><td style="text-align:center">Buffet</td><td style="text-align:center">Burger Place</td><td>Cafe</td><td>Canteen</td></tr>
+<tr><td>Cart</td><td style="text-align:center">Chinese Restaurant</td><td style="text-align:center">Confectionery</td><td>Fast Food</td><td>Ice Cream Parlour</td></tr>
+<tr><td>Indian Restaurant</td><td style="text-align:center">Italian Restaurant</td><td style="text-align:center">Japanese Restaurant</td><td>Juice Bar</td><td>Kabab</td></tr>
+<tr><td>Korean Restaurant</td><td style="text-align:center">Mexican Restaurant</td><td style="text-align:center">Mughlai Restaurant</td><td>Organic Food</td><td>Pizza Place</td></tr>
+<tr><td>Restaurant</td><td style="text-align:center">Sea Food</td><td style="text-align:center">Sweets</td><td>Thai Restaurant</td><td>Tong</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th></th><th style="text-align:center"></th><th style="text-align:center">Fuel</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>CNG</td><td style="text-align:center">Floating</td><td style="text-align:center">LPG</td><td>Oil</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Government</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Government</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Airforce Headquarter</td><td>Ansar Camp</td><td style="text-align:center">Ansar Headquarter</td><td>Army Headquarter</td><td>BGB Headquarter</td></tr>
+<tr><td>Court</td><td>Digital Center</td><td style="text-align:center">Embassy</td><td>Fire Service</td><td>Government Clinic</td></tr>
+<tr><td>Government Guest House</td><td>Government Office</td><td style="text-align:center">High Commission</td><td>Jail</td><td>Ministry</td></tr>
+<tr><td>Nagar Bhaban</td><td>Navy Headquarter</td><td style="text-align:center">Police Fari</td><td>Police Headquarter</td><td>Police Lines</td></tr>
+<tr><td>Police Office</td><td>Police Outpost</td><td style="text-align:center">Police Station</td><td>Police Sub Station</td><td>Post Office</td></tr>
+<tr><td>Prime Ministers Office</td><td>RAB Headquarter</td><td style="text-align:center">RAB Office</td><td>Sub Registry Office</td><td>Union Parishad Office</td></tr>
+<tr><td>Ward Commissioner Office</td><td></td><td style="text-align:center"></td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Healthcare</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th style="text-align:center"></th><th style="text-align:center">Healthcare</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Blood Bank</td><td style="text-align:center">Clinic</td><td style="text-align:center">Dental Clinic</td><td>Diagnostic Center</td><td>Doctors Chamber</td></tr>
+<tr><td>Homeo Clinic</td><td style="text-align:center">Homeo Hall</td><td style="text-align:center">Hospital</td><td>Laboratory</td><td>Medical Laboratory</td></tr>
+<tr><td>Medical Laboratory</td><td style="text-align:center">Rehabilitation Center</td><td style="text-align:center">Specialized Hospital</td><td>Veterinary Hospital</td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Hotel</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Hotel</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>1 Star</td><td>2 Star</td><td style="text-align:center">3 Star</td><td>4 Star</td><td>5 Star</td></tr>
+<tr><td>7 Star</td><td></td><td style="text-align:center"></td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Industry</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Industry</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Brick Field</td><td>Dairy</td><td style="text-align:center">Dying Plant</td><td>EPZ</td><td>Factory</td></tr>
+<tr><td>Garments</td><td>IT Park</td><td style="text-align:center">Manufacturing</td><td>Pharmaceuticals</td><td>Printing Mill</td></tr>
+<tr><td>Rolling Mill</td><td>Tannery</td><td style="text-align:center">Textile</td><td>Washing Plant</td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Landmark</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Landmark</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Circle</td><td>Dustbin</td><td style="text-align:center">Hill</td><td>Landmark</td><td>Pond</td></tr>
+<tr><td>Rail gate</td><td></td><td style="text-align:center"></td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Office</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Office</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Branch Office</td><td>Buying House</td><td style="text-align:center">Consultancy Firm</td><td>Corporate Office</td><td>Financial Institutions</td></tr>
+<tr><td>Head Office</td><td>Insurance</td><td style="text-align:center">IT Firm</td><td>Kazi Office</td><td>Law Firm</td></tr>
+<tr><td>NGO</td><td>Office</td><td style="text-align:center">Political Office</td><td>Private Agency</td><td>Real Estate Developer</td></tr>
+<tr><td>Social Welfare</td><td>Travel Agency</td><td style="text-align:center"></td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Others</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Others</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Dockyard</td><td>Others</td><td style="text-align:center">Public Toilet</td><td>STS</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Recreation</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Recreation</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Amusement Park</td><td>Auditorium</td><td style="text-align:center">Beach</td><td>Billiards</td><td>Cinema Hall</td></tr>
+<tr><td>Community Center</td><td>Convention Center</td><td style="text-align:center">Cricket Club</td><td>Field</td><td>Football Club</td></tr>
+<tr><td>Gallery</td><td>Games Zone</td><td style="text-align:center">Historical Place</td><td>Museum</td><td>Park</td></tr>
+<tr><td>Picnic Spot</td><td>Practice Pad</td><td style="text-align:center">Recreation Club</td><td>Resort</td><td>Stadium</td></tr>
+<tr><td>Swimming Complex</td><td>Theatre</td><td style="text-align:center">Tourist Spot</td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Religious Place</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Religious Place</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Budda Mandir</td><td>Church</td><td style="text-align:center">Darbar Sharif</td><td>Eidgah</td><td>Graveyard</td></tr>
+<tr><td>Gurudwara</td><td>Hajj Camp</td><td style="text-align:center">Mandir</td><td>Masjid</td><td>Mazar</td></tr>
+<tr><td>Shoshan Ghat</td><td></td><td style="text-align:center"></td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Residential</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Residential</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Abandoned House</td><td>Apartment</td><td style="text-align:center">Hostel</td><td>House</td><td>Old Home</td></tr>
+<tr><td>Orphanage</td><td>Quarter</td><td style="text-align:center">Slum</td><td>Under Construction</td><td>Vacant land</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Shop</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Shop</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Accessories</td><td>Advertising Service</td><td style="text-align:center">Arms Shop</td><td>Arot</td><td>Bag Shop</td></tr>
+<tr><td>Battery</td><td>Bedding Store</td><td style="text-align:center">Bhangari</td><td>Bkash</td><td>Book Shop</td></tr>
+<tr><td>Cable Network</td><td>Car &amp; Motorcycle Wash</td><td style="text-align:center">Car Decoration</td><td>car oil store</td><td>Car Paint Workshop</td></tr>
+<tr><td>Car Parts Shop</td><td>Car Rental</td><td style="text-align:center">Car Workshop</td><td>Chemical</td><td>Clothing</td></tr>
+<tr><td>Clothing Accesories</td><td>Colour Shop</td><td style="text-align:center">Computer Shop</td><td>Cooking Ingredients</td><td>Cosmetics</td></tr>
+<tr><td>Crockeries</td><td>Curtain Store</td><td style="text-align:center">Cyber Cafe</td><td>Cycle Shop</td><td>Dairy Store</td></tr>
+<tr><td>Clothing Accesories</td><td>Colour Shop</td><td style="text-align:center">Computer Shop</td><td>Cooking Ingredients</td><td>Cosmetics</td></tr>
+<tr><td>Crockeries</td><td>Curtain Store</td><td style="text-align:center">Cyber Cafe</td><td>Cycle Shop</td><td>Dairy Store</td></tr>
+<tr><td>Decorator</td><td>Departmental Store</td><td style="text-align:center">Dry Cleaners</td><td>Electrical</td><td>Electronics</td></tr>
+<tr><td>Fabric Store</td><td>Feed Shop</td><td style="text-align:center">Fish Shop</td><td>Flower Shop</td><td>Footwear</td></tr>
+<tr><td>Fruit Shop</td><td>Funeral Store</td><td style="text-align:center">Furniture</td><td>Gas Cylinder</td><td>General Store</td></tr>
+<tr><td>Gift Shop</td><td>Hookah Shop</td><td style="text-align:center">Interior Decoration</td><td>iPay</td><td>ISP</td></tr>
+<tr><td>Jewellery Shop</td><td>Kitchen Accessories</td><td style="text-align:center">Laundry</td><td>Meat Shop</td><td>Mens Parlor</td></tr>
+<tr><td>MobiCash</td><td>Mobile Phone Shop</td><td style="text-align:center">Mobile Recharge</td><td>Mobile Repair Shop</td><td>Money Exchange</td></tr>
+<tr><td>Motor Parts</td><td>Motor Vehicle Dealer</td><td style="text-align:center">Motorcycle Workshop</td><td>Music Instruments</td><td>Nagad</td></tr>
+<tr><td>Newspaper</td><td>Nursery</td><td style="text-align:center">Optics</td><td>Paan Shop</td><td>Pet Shop</td></tr>
+<tr><td>Pharmacy</td><td>Photo Frame Shop</td><td style="text-align:center">Photo Studio</td><td>Photocopy</td><td>Plastic Shop</td></tr>
+<tr><td>Poultry</td><td>Printing</td><td style="text-align:center">Raw Material</td><td>Refrigerator Workshop</td><td>Religious Goods</td></tr>
+<tr><td>Rexin Shop</td><td>Rice Shop</td><td style="text-align:center">Rocket</td><td>Saloon</td><td>Seed Shop</td></tr>
+<tr><td>Sports Shop</td><td>Stationary</td><td style="text-align:center">Studio</td><td>Super Shop</td><td>Surecash</td></tr>
+<tr><td>Surgical</td><td>Tailor</td><td style="text-align:center">Tcash</td><td>Toy Shop</td><td>Tyre Shop</td></tr>
+<tr><td>Ucash</td><td>Vape Shop</td><td style="text-align:center">Vegetable Shop</td><td>Veterinary Pharmacy</td><td>Warehouse</td></tr>
+<tr><td>Watch Store</td><td>Womens Parlour</td><td style="text-align:center">Workshop</td><td></td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Transportation</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Transportation</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Airport</td><td>Airport Terminal</td><td style="text-align:center">Bus Counter</td><td>Bus Stand</td><td>Bus Terminal</td></tr>
+<tr><td>Container Dipo</td><td>Ferry Ghat</td><td style="text-align:center">Garage</td><td>Kheya Ghat</td><td>Land Port</td></tr>
+<tr><td>Launch Terminal</td><td>Parking</td><td style="text-align:center">Railway Station</td><td>Rickshaw Garage</td><td>Riverport</td></tr>
+<tr><td>Sea Port</td><td>Tempu Stand</td><td style="text-align:center">Transport Agency</td><td>Truck Stand</td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>Subtypes of <strong>Utility</strong> pType</li>
+</ul>
+<table>
+<thead>
+<tr><th></th><th></th><th style="text-align:center">Utility</th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>DESCO</td><td>DNCC</td><td style="text-align:center">DNCC Bazar</td><td>DPDC</td><td>DSCC</td></tr>
+<tr><td>Power Station</td><td>Wasa</td><td style="text-align:center">Water ATM</td><td>Water Pump</td><td></td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/area-geolocation"><span class="arrow-prev">← </span><span>Area API</span></a><a class="docs-next button" href="/docs/area-list"><span>Area List</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#places-type">Places Type</a></li><li><a href="#all-ptypes">All pTypes</a></li><li><a href="#all-subtypes">All subTypes</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2021 Barikoi Technologies Limited</section></footer></div></body></html>

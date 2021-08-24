@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Measure Distance · Barikoi</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;iframe src=&quot;http://bkoi-gl-example-measure-distance.surge.sh/&quot; width=&quot;100%&quot; height=&quot;280px&quot; frameborder=&quot;0&quot; style=&quot;border:1px solid black&quot; allowfullscreen&gt;&lt;/iframe&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Measure Distance · Barikoi"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="&lt;iframe src=&quot;http://bkoi-gl-example-measure-distance.surge.sh/&quot; width=&quot;100%&quot; height=&quot;280px&quot; frameborder=&quot;0&quot; style=&quot;border:1px solid black&quot; allowfullscreen&gt;&lt;/iframe&gt;"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Barikoi</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro" target="_self">API</a></li><li class=""><a href="/docs/map-add" target="_self">Maps API</a></li><li class=""><a href="/docs/library-intro" target="_self">JavaScript Library</a></li><li class=""><a href="/docs/android-intro" target="_self">Android Location Library</a></li><li class=""><a href="/docs/pricing-intro" target="_self">Pricing</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Measure Distance</h1></header><article><div><span><iframe src="http://bkoi-gl-example-measure-distance.surge.sh/" width="100%" height="280px" frameborder="0" style="border:1px solid black" allowfullscreen></iframe>
+<h2></h2>
+<p>Add <span style="color:#e83e8c">turf.js</span> for <span style="color:#e83e8c">distance</span> measurement</p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">'https://unpkg.com/@turf/turf@6.3.0/turf.min.js'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>Add <span style="color:#e83e8c">distance</span> container <span style="color:#e83e8c">styles</span></p>
+<pre><code class="hljs css language-css"><span class="hljs-selector-class">.distance-container</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+}
+    
+<span class="hljs-selector-class">.distance-container</span> &gt; * {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">11px</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">18px</span>;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span> <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;
+}
+</code></pre>
+<p>Add <span style="color:#e83e8c">distance</span> container <span style="color:#e83e8c">div</span></p>
+<pre><code class="hljs css language-html"> <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"distance"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"distance-container"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>Add <span style="color:#e83e8c">Map</span></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> bkoigl.Map({
+    <span class="hljs-attr">container</span>: <span class="hljs-string">'map'</span>,
+    <span class="hljs-attr">center</span>: [ <span class="hljs-number">90.3938010872331</span>, <span class="hljs-number">23.821600277500405</span> ],
+    <span class="hljs-attr">zoom</span>: <span class="hljs-number">12</span>
+})
+</code></pre>
+<p>Add <span style="color:#e83e8c">GeoJSON</span> Features to hold feature data</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> distanceContainer = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'distance'</span>)
+
+<span class="hljs-comment">// GeoJSON object to hold our measurement features</span>
+<span class="hljs-keyword">const</span> geojson = {
+    <span class="hljs-string">'type'</span>: <span class="hljs-string">'FeatureCollection'</span>,
+    <span class="hljs-string">'features'</span>: []
+}
+
+<span class="hljs-comment">// Used to draw a line between points</span>
+<span class="hljs-keyword">const</span> linestring = {
+    <span class="hljs-string">'type'</span>: <span class="hljs-string">'Feature'</span>,
+    <span class="hljs-string">'geometry'</span>: {
+        <span class="hljs-string">'type'</span>: <span class="hljs-string">'LineString'</span>,
+        <span class="hljs-string">'coordinates'</span>: []
+    }
+}
+</code></pre>
+<p>Add sources and layers to <span style="color:#e83e8c">map</span> and a <span style="color:#e83e8c"><code>click</code></span> event to draw lines between <span style="color:#e83e8c">clicked</span> points and measure distance</p>
+<pre><code class="hljs css language-js">map.on(<span class="hljs-string">'load'</span>, () =&gt; {
+    map.addSource(<span class="hljs-string">'geojson'</span>, {
+        <span class="hljs-string">'type'</span>: <span class="hljs-string">'geojson'</span>,
+        <span class="hljs-string">'data'</span>: geojson
+    })
+
+    <span class="hljs-comment">// Add styles to the map</span>
+    map.addLayer({
+        <span class="hljs-attr">id</span>: <span class="hljs-string">'measure-points'</span>,
+        <span class="hljs-attr">type</span>: <span class="hljs-string">'circle'</span>,
+        <span class="hljs-attr">source</span>: <span class="hljs-string">'geojson'</span>,
+        <span class="hljs-attr">paint</span>: {
+            <span class="hljs-string">'circle-radius'</span>: <span class="hljs-number">5</span>,
+            <span class="hljs-string">'circle-color'</span>: <span class="hljs-string">'#000'</span>
+        },
+        <span class="hljs-attr">filter</span>: [ <span class="hljs-string">'in'</span>, <span class="hljs-string">'$type'</span>, <span class="hljs-string">'Point'</span> ]
+    })
+
+    map.addLayer({
+        <span class="hljs-attr">id</span>: <span class="hljs-string">'measure-lines'</span>,
+        <span class="hljs-attr">type</span>: <span class="hljs-string">'line'</span>,
+        <span class="hljs-attr">source</span>: <span class="hljs-string">'geojson'</span>,
+        <span class="hljs-attr">layout</span>: {
+            <span class="hljs-string">'line-cap'</span>: <span class="hljs-string">'round'</span>,
+            <span class="hljs-string">'line-join'</span>: <span class="hljs-string">'round'</span>
+        },
+        <span class="hljs-attr">paint</span>: {
+            <span class="hljs-string">'line-color'</span>: <span class="hljs-string">'#000'</span>,
+            <span class="hljs-string">'line-width'</span>: <span class="hljs-number">2.5</span>
+        },
+        <span class="hljs-attr">filter</span>: [ <span class="hljs-string">'in'</span>, <span class="hljs-string">'$type'</span>, <span class="hljs-string">'LineString'</span> ]
+    })
+
+    map.on(<span class="hljs-string">'click'</span>, e =&gt; {
+        <span class="hljs-keyword">const</span> features = map.queryRenderedFeatures(e.point, {
+            <span class="hljs-attr">layers</span>: [ <span class="hljs-string">'measure-points'</span> ]
+        })
+
+        
+        <span class="hljs-comment">// Remove the linestring from the group</span>
+        <span class="hljs-comment">// So we can redraw it based on the points collection</span>
+        <span class="hljs-keyword">if</span>(geojson.features.length &gt; <span class="hljs-number">1</span>) {
+            geojson.features.pop()
+        }
+
+        <span class="hljs-comment">// Clear the Distance container to populate it with a new value</span>
+        distanceContainer.innerHTML = <span class="hljs-string">''</span>
+
+        <span class="hljs-comment">// If a feature was clicked, remove it from the map</span>
+        <span class="hljs-keyword">if</span> (features.length) {
+            <span class="hljs-keyword">const</span> id = features[<span class="hljs-number">0</span>].properties.id
+            geojson.features = geojson.features.filter(<span class="hljs-function"><span class="hljs-params">point</span> =&gt;</span> point.properties.id !== id)
+
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">const</span> point = {
+                <span class="hljs-string">'type'</span>: <span class="hljs-string">'Feature'</span>,
+                <span class="hljs-string">'geometry'</span>: {
+                    <span class="hljs-string">'type'</span>: <span class="hljs-string">'Point'</span>,
+                    <span class="hljs-string">'coordinates'</span>: [ e.lngLat.lng, e.lngLat.lat ]
+                },
+                <span class="hljs-string">'properties'</span>: {
+                    <span class="hljs-string">'id'</span>: <span class="hljs-built_in">String</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime())
+                }
+            }
+            
+            geojson.features.push(point)
+        }
+
+        <span class="hljs-keyword">if</span> (geojson.features.length &gt; <span class="hljs-number">1</span>) {
+            linestring.geometry.coordinates = geojson.features.map(<span class="hljs-function"><span class="hljs-params">point</span> =&gt;</span> point.geometry.coordinates)
+            geojson.features.push(linestring)
+        
+            <span class="hljs-comment">// Populate the distanceContainer with total distance</span>
+            <span class="hljs-keyword">const</span> value = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'pre'</span>)
+            value.textContent = <span class="hljs-string">'Total distance: '</span> + turf.length(linestring).toLocaleString() + <span class="hljs-string">'km'</span>
+            distanceContainer.appendChild(value)
+        }
+        
+        map.getSource(<span class="hljs-string">'geojson'</span>).setData(geojson)
+    })
+})
+</code></pre>
+<p>Add <span style="color:#e83e8c"><code>mousemove</code></span> event to style <span style="color:#e83e8c">cursor</span> on points and map</p>
+<pre><code class="hljs css language-js">map.on(<span class="hljs-string">'mousemove'</span>, e =&gt; {
+    <span class="hljs-keyword">const</span> features = map.queryRenderedFeatures(e.point, {
+        <span class="hljs-attr">layers</span>: [ <span class="hljs-string">'measure-points'</span> ]
+    })
+
+    <span class="hljs-comment">// UI indicator for clicking/hovering a point on the map</span>
+    map.getCanvas().style.cursor = features.length
+        ? <span class="hljs-string">'pointer'</span>
+        : <span class="hljs-string">'crosshair'</span>
+})
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="full-source-code"></a><a href="#full-source-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Full Source Code:</h2>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.barikoi.com/bkoi-gl-js/dist/bkoi-gl.css"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.barikoi.com/bkoi-gl-js/dist/bkoi-gl.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">'https://unpkg.com/@turf/turf@6.3.0/turf.min.js'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-tag">body</span>, <span class="hljs-selector-id">#map</span> {
+            <span class="hljs-attribute">box-sizing</span>: border-box;
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">100vw</span>;
+            <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+            <span class="hljs-attribute">overflow</span>: hidden;
+        }
+
+        <span class="hljs-selector-class">.distance-container</span> {
+            <span class="hljs-attribute">position</span>: absolute;
+            <span class="hljs-attribute">top</span>: <span class="hljs-number">10px</span>;
+            <span class="hljs-attribute">left</span>: <span class="hljs-number">10px</span>;
+            <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+        }
+            
+        <span class="hljs-selector-class">.distance-container</span> &gt; * {
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
+            <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">11px</span>;
+            <span class="hljs-attribute">line-height</span>: <span class="hljs-number">18px</span>;
+            <span class="hljs-attribute">display</span>: block;
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span> <span class="hljs-number">10px</span>;
+            <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Measure Distance<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"map"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"distance"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"distance-container"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> bkoigl.Map({
+            <span class="hljs-attr">container</span>: <span class="hljs-string">'map'</span>,
+            <span class="hljs-attr">center</span>: [ <span class="hljs-number">90.3938010872331</span>, <span class="hljs-number">23.821600277500405</span> ],
+            <span class="hljs-attr">zoom</span>: <span class="hljs-number">12</span>
+        })
+
+        <span class="hljs-keyword">const</span> distanceContainer = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'distance'</span>)
+ 
+        <span class="hljs-keyword">const</span> geojson = {
+            <span class="hljs-string">'type'</span>: <span class="hljs-string">'FeatureCollection'</span>,
+            <span class="hljs-string">'features'</span>: []
+        }
+
+        <span class="hljs-keyword">const</span> linestring = {
+            <span class="hljs-string">'type'</span>: <span class="hljs-string">'Feature'</span>,
+            <span class="hljs-string">'geometry'</span>: {
+                <span class="hljs-string">'type'</span>: <span class="hljs-string">'LineString'</span>,
+                <span class="hljs-string">'coordinates'</span>: []
+            }
+        }
+
+        map.on(<span class="hljs-string">'load'</span>, () =&gt; {
+            map.addSource(<span class="hljs-string">'geojson'</span>, {
+                <span class="hljs-string">'type'</span>: <span class="hljs-string">'geojson'</span>,
+                <span class="hljs-string">'data'</span>: geojson
+            })
+
+            map.addLayer({
+                <span class="hljs-attr">id</span>: <span class="hljs-string">'measure-points'</span>,
+                <span class="hljs-attr">type</span>: <span class="hljs-string">'circle'</span>,
+                <span class="hljs-attr">source</span>: <span class="hljs-string">'geojson'</span>,
+                <span class="hljs-attr">paint</span>: {
+                    <span class="hljs-string">'circle-radius'</span>: <span class="hljs-number">5</span>,
+                    <span class="hljs-string">'circle-color'</span>: <span class="hljs-string">'#000'</span>
+                },
+                <span class="hljs-attr">filter</span>: [ <span class="hljs-string">'in'</span>, <span class="hljs-string">'$type'</span>, <span class="hljs-string">'Point'</span> ]
+            })
+
+            map.addLayer({
+                <span class="hljs-attr">id</span>: <span class="hljs-string">'measure-lines'</span>,
+                <span class="hljs-attr">type</span>: <span class="hljs-string">'line'</span>,
+                <span class="hljs-attr">source</span>: <span class="hljs-string">'geojson'</span>,
+                <span class="hljs-attr">layout</span>: {
+                    <span class="hljs-string">'line-cap'</span>: <span class="hljs-string">'round'</span>,
+                    <span class="hljs-string">'line-join'</span>: <span class="hljs-string">'round'</span>
+                },
+                <span class="hljs-attr">paint</span>: {
+                    <span class="hljs-string">'line-color'</span>: <span class="hljs-string">'#000'</span>,
+                    <span class="hljs-string">'line-width'</span>: <span class="hljs-number">2.5</span>
+                },
+                <span class="hljs-attr">filter</span>: [ <span class="hljs-string">'in'</span>, <span class="hljs-string">'$type'</span>, <span class="hljs-string">'LineString'</span> ]
+            })
+
+            map.on(<span class="hljs-string">'click'</span>, e =&gt; {
+                <span class="hljs-keyword">const</span> features = map.queryRenderedFeatures(e.point, {
+                    <span class="hljs-attr">layers</span>: [ <span class="hljs-string">'measure-points'</span> ]
+                })
+
+                
+                <span class="hljs-keyword">if</span>(geojson.features.length &gt; <span class="hljs-number">1</span>) {
+                    geojson.features.pop()
+                }
+
+                distanceContainer.innerHTML = <span class="hljs-string">''</span>
+
+                <span class="hljs-keyword">if</span> (features.length) {
+                    <span class="hljs-keyword">const</span> id = features[<span class="hljs-number">0</span>].properties.id
+                    geojson.features = geojson.features.filter(<span class="hljs-function"><span class="hljs-params">point</span> =&gt;</span> point.properties.id !== id)
+
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-keyword">const</span> point = {
+                        <span class="hljs-string">'type'</span>: <span class="hljs-string">'Feature'</span>,
+                        <span class="hljs-string">'geometry'</span>: {
+                            <span class="hljs-string">'type'</span>: <span class="hljs-string">'Point'</span>,
+                            <span class="hljs-string">'coordinates'</span>: [ e.lngLat.lng, e.lngLat.lat ]
+                        },
+                        <span class="hljs-string">'properties'</span>: {
+                            <span class="hljs-string">'id'</span>: <span class="hljs-built_in">String</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime())
+                        }
+                    }
+                    
+                    geojson.features.push(point)
+                }
+
+                <span class="hljs-keyword">if</span> (geojson.features.length &gt; <span class="hljs-number">1</span>) {
+                    linestring.geometry.coordinates = geojson.features.map(<span class="hljs-function"><span class="hljs-params">point</span> =&gt;</span> point.geometry.coordinates)
+                    geojson.features.push(linestring)
+                
+                    <span class="hljs-keyword">const</span> value = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'pre'</span>)
+                    value.textContent = <span class="hljs-string">'Total distance: '</span> + turf.length(linestring).toLocaleString() + <span class="hljs-string">'km'</span>
+                    distanceContainer.appendChild(value)
+                }
+                
+                map.getSource(<span class="hljs-string">'geojson'</span>).setData(geojson)
+            })
+        })
+
+        map.on(<span class="hljs-string">'mousemove'</span>, e =&gt; {
+            <span class="hljs-keyword">const</span> features = map.queryRenderedFeatures(e.point, {
+                <span class="hljs-attr">layers</span>: [ <span class="hljs-string">'measure-points'</span> ]
+            })
+
+            map.getCanvas().style.cursor = features.length
+                ? <span class="hljs-string">'pointer'</span>
+                : <span class="hljs-string">'crosshair'</span>
+        })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#full-source-code">Full Source Code:</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2021 Barikoi Technologies Limited</section></footer></div></body></html>
