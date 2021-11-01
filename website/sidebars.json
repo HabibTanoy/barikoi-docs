@@ -71,11 +71,11 @@
   },
   "Maps API": {
     "Getting Started": [
-      "map-add"
+      "quick-start" 
     ],
     "Example" : [
+      "map-add",
       "custom-display",
-      "switchable-map",
       "add-controls",
       "add-marker",
       "add-popup",
@@ -88,8 +88,7 @@
       "measure-area",
       "icon-layer",
       "geojson-layer",
-      "context-menu",
-      "heatmap-layer"
+      "context-menu"
     ],
     "API Reference": [
       "bkoi-map"

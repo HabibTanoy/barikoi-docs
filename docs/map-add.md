@@ -1,6 +1,6 @@
 ---
 id: map-add
-title: Display Bkoi GL JS Map
+title: Display Basic Map
 ---
 
 ## Overview
@@ -21,11 +21,11 @@ Bkoi GL JS provides a JavaScript library to render interactive maps that display
 
 2. Initialize a map in an HTML element with Bkoi GL JS. <br>
 Add <span style="color:#e83e8c">`<div>`</span> tag into your page. The map will be loaded in the tag.
-``` 
+``` html
 <div id="map"></div>
  ```
 3. The tag must have non-zero height.
-```
+``` css
 #map {
     box-sizing: border-box;
     margin: 0;
@@ -36,7 +36,8 @@ Add <span style="color:#e83e8c">`<div>`</span> tag into your page. The map will 
 }
 ```
 4. Finally, load the map
-```
+``` js
+bkoigl.accessToken = '<Barikoi API Key>' // required
 new bkoigl.Map({
     container: 'map',
     center: [ 90.3938010872331, 23.821600277500405 ],
@@ -44,7 +45,7 @@ new bkoigl.Map({
 })
 ```
 ## Full Source Code:
-```
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,6 +70,7 @@ new bkoigl.Map({
     <div id="map"></div>
 
     <script>
+        bkoigl.accessToken = '<Barikoi API Key>' // required
         new bkoigl.Map({
             container: 'map',
             center: [ 90.3938010872331, 23.821600277500405 ],

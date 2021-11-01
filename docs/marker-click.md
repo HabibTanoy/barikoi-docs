@@ -46,11 +46,11 @@ map.on('load', () => {
     <div id="map"></div>
 
     <script>
+        bkoigl.accessToken = '<Barikoi API Key>' // required
         const map = new bkoigl.Map({
             container: 'map',
             center: [ 90.3938010872331, 23.821600277500405 ],
-            zoom: 12,
-            styleType: 'light'
+            zoom: 12
         })
 
         map.on('load', () => {

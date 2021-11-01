@@ -10,6 +10,7 @@ title: Display Custom Map Style
  Add a map style url to the <span style="color:#e83e8c">style</span> prop.
 
 ``` JS
+bkoigl.accessToken = '<Barikoi API Key>' // required
 new bkoigl.Map({
     container: 'map',
     center: [ 90.3938010872331, 23.821600277500405 ],
@@ -45,6 +46,7 @@ new bkoigl.Map({
     <div id="map"></div>
 
     <script>
+        bkoigl.accessToken = '<Barikoi API Key>' // required
         new bkoigl.Map({
             container: 'map',
             center: [ 90.3938010872331, 23.821600277500405 ],

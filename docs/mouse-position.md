@@ -97,6 +97,7 @@ map.on('click', e => {
     </div>
 
     <script>
+        bkoigl.accessToken = '<Barikoi API Key>' // required
         const map = new bkoigl.Map({
             container: 'map',
             center: [ 90.3938010872331, 23.821600277500405 ],

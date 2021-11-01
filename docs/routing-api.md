@@ -5,24 +5,15 @@ title: Routing Api
 ##
 ```GET``` Routing
 ```
-https://barikoi.xyz/v1/api/route/API_KEY/90.362548828125,23.94107556246209;90.31585693359375,24.134221690669204?overview=true&alternatives=true&steps=true&hints=
+https://barikoi.xyz/v1/api/route/API_KEY/90.362548828125,23.94107556246209;90.31585693359375,24.134221690669204
 ```
 
 This api provides routing details for two location points.
 
-## API PARAMS
-
-| Parameter     | Value         |
-| ------------- |:-------------:| 
-| overview      | true          |
-| alternatives  | true          | 
-| steps         | true          |
-| hints         |    ;          |
-
 ## Routing API Request Example
 
 ``` Js
-fetch('https://barikoi.xyz/v1/api/route/API_KEY/90.362548828125,23.94107556246209;90.31585693359375,24.134221690669204?overview=true&alternatives=true&steps=true&hints=')
+fetch('https://barikoi.xyz/v1/api/route/API_KEY/90.362548828125,23.94107556246209;90.31585693359375,24.134221690669204')
 .then(response => response.json())
 .catch(error => console.error('Error:', error))
 .then(response => console.log('Success:', response))
@@ -35,25 +26,25 @@ fetch('https://barikoi.xyz/v1/api/route/API_KEY/90.362548828125,23.9410755624620
     "code": "Ok",
     "routes": [
         {
-            "geometry": "g}bqCmhpfPjf@uE_P_~BueAjZ}sDpCg@~t@_{DdfF}ZbrCodA`bCsM{m@ojCaUw^meAmg@eS_~A_Ok}AbFmXbQoi@mmAuxEfS",
+            "geometry": "g}bqCmhpfPdMaDqEqO`U}MiFc`BueAjZonBlGisJs_@uh@gManAeJaaBzGsZbQ}v@jsAw`@jwAqt@p`BiBtjAvZzhAga@fAmXbQoi@mmA{vA~Ly`CfE",
             "legs": [
                 {
                     "steps": [],
-                    "distance": 33452.2,
-                    "duration": 2481.4,
+                    "distance": 31580.5,
+                    "duration": 5011.5,
                     "summary": "",
-                    "weight": 2481.4
+                    "weight": 5011.5
                 }
             ],
-            "distance": 33452.2,
-            "duration": 2481.4,
+            "distance": 31580.5,
+            "duration": 5011.5,
             "weight_name": "routability",
-            "weight": 2481.4
+            "weight": 5011.5
         }
     ],
     "waypoints": [
         {
-            "hint": "V10DgFldA4AAAAAAJwAAAAAAAAAfAQAAAAAAAFZN10EAAAAA6SFHQwAAAAAnAAAAAAAAAB8BAACEAAAA6tliBeZObQG10mIF1E9tAQAATwvGEH3j",
+            "hint": "9NsKgPbbCoAAAAAAUQAAAAAAAABWAgAAAAAAAFZN10EAAAAA6SFHQwAAAABRAAAAAAAAAFYCAADlAAAA6tliBeZObQG10mIF1E9tAQAATwvicBOH",
             "distance": 189.684241,
             "name": "",
             "location": [
@@ -62,7 +53,7 @@ fetch('https://barikoi.xyz/v1/api/route/API_KEY/90.362548828125,23.9410755624620
             ]
         },
         {
-            "hint": "xy0BgPzPAoBDAAAAKwAAAL8QAAAtBgAAjQGVQqNFPkI1VJRFXcnaREMAAAArAAAAvxAAAC0GAACEAAAAsjtiBbBHcAFRHGIFTkJwATMAnwrGEH3j",
+            "hint": "xc0KgNPNCoCGAAAAVwAAAH8hAABcDAAAjQGVQqNFPkI1VJRFXcnaRIYAAABXAAAAfyEAAFwMAADlAAAAsjtiBbBHcAFRHGIFTkJwATMAnwricBOH",
             "distance": 830.734383,
             "name": "Mouchak - Fulbari Road",
             "location": [

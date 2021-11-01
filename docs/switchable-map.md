@@ -29,6 +29,7 @@ Add select menu <span style="color:#e83e8c">style</span>
 ```
 Assign the first select option value as the default <span style="color:#e83e8c">style</span> type. Then use <span style="color:#e83e8c">event listener</span> to set the style type of the map.
 ``` JS
+bkoigl.accessToken = '<Barikoi API Key>' // required
 const map = new bkoigl.Map({
     container: 'map',
     center: [ 90.3938010872331, 23.821600277500405 ],
@@ -85,6 +86,7 @@ map.on('load', () => {
     <div id="map"></div>
 
     <script>
+        bkoigl.accessToken = '<Barikoi API Key>' // required
         const map = new bkoigl.Map({
             container: 'map',
             center: [ 90.3938010872331, 23.821600277500405 ],

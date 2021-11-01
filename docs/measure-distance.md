@@ -42,6 +42,7 @@ Add <span style="color:#e83e8c">distance</span> container <span style="color:#e8
 Add <span style="color:#e83e8c">Map</span>
 
 ``` js
+bkoigl.accessToken = '<Barikoi API Key>' // required
 const map = new bkoigl.Map({
     container: 'map',
     center: [ 90.3938010872331, 23.821600277500405 ],
@@ -217,6 +218,7 @@ map.on('mousemove', e => {
     <div id="distance" class="distance-container"></div>
 
     <script>
+        bkoigl.accessToken = '<Barikoi API Key>' // required
         const map = new bkoigl.Map({
             container: 'map',
             center: [ 90.3938010872331, 23.821600277500405 ],

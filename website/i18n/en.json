@@ -133,7 +133,7 @@
         "title": "Library"
       },
       "map-add": {
-        "title": "Display Bkoi GL JS Map"
+        "title": "Display Basic Map"
       },
       "marker-click": {
         "title": "Add Marker on Map Click"
@@ -179,6 +179,9 @@
       },
       "push-location": {
         "title": "Push Location Data"
+      },
+      "quick-start": {
+        "title": "Quickstart"
       },
       "rev-geo-js": {
         "title": "Reverse Geocoding"

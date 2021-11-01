@@ -22,3 +22,5 @@ title: API usage and pricing clarification
 |[Route Optimization API](https://docs.barikoi.com/docs/route-api/#post-route-optimization)| 1|||||||||||||
 |[Nearest API](https://docs.barikoi.com/docs/route-api/#get-nearest) | 2|||||||||||||
 |[Route Match API](https://docs.barikoi.com/docs/route-api/#get-route-match) | 2|||||||||||||
+
+<small style="font-size:10px">Note: Custom API 50 paisa per API call.</small>
