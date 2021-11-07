@@ -12,7 +12,7 @@ https://barikoi.xyz/v1/api/trace/user/route
 This api provides a user’s either all the routes (in linestring json format) along with each route’s distance(unit in meter) or total distance(unit in meter) of all the routes between given the start time and end time. 
 <br>
 
-Start_time ,end_time ,user_id ,api_key ,path are required to make this get request. 
+start_time ,end_time ,user_id ,api_key ,path are required to make this get request. 
 <br>
 
 To determine api’s response this api takes a parameter ‘path’ , it’s value can be either true or false. If true is set to path parameter api wil return all the routes (in linestring json format) along with each route’s distance(unit in meter) and if false is set to path parameter api will return total distance(unit in meter) of all the routes between given the start time and end time.

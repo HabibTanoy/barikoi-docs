@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Trips Route and Distance · Barikoi</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="##"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Trips Route and Distance · Barikoi"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="##"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Barikoi</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/intro" target="_self">API</a></li><li class=""><a href="/docs/quick-start" target="_self">Bkoi GL JS</a></li><li class=""><a href="/docs/library-intro" target="_self">JavaScript Library</a></li><li class=""><a href="/docs/android-intro" target="_self">Android Location Library</a></li><li class=""><a href="/docs/pricing-intro" target="_self">Pricing</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Barikoi Trace</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Barikoi Places API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Places API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/rev-geo">Reverse Geocode</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-server">Reverse Geocoding (Server)</a></li><li class="navListItem"><a class="navItem" href="/docs/geo-code">Geocoding</a></li><li class="navListItem"><a class="navItem" href="/docs/autocomplete">Autocomplete</a></li><li class="navListItem"><a class="navItem" href="/docs/nearby">Nearby</a></li><li class="navListItem"><a class="navItem" href="/docs/distance">Distance</a></li><li class="navListItem"><a class="navItem" href="/docs/rupantor-geocoder">Rupantor Geocoder</a></li><li class="navListItem"><a class="navItem" href="/docs/route-api">Routing Api</a></li><li class="navListItem"><a class="navItem" href="/docs/add-place">Add Place</a></li><li class="navListItem"><a class="navItem" href="/docs/district">District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/sub-district">Sub-District Api</a></li><li class="navListItem"><a class="navItem" href="/docs/city-api">City Api</a></li><li class="navListItem"><a class="navItem" href="/docs/union-api">Union Api</a></li><li class="navListItem"><a class="navItem" href="/docs/area-geolocation">Area API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Trace</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/push-location">Push Location Data</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-pull">Users Current Position</a></li><li class="navListItem"><a class="navItem" href="/docs/route-distance">User Route and Distance</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/trips-route-distance">Trips Route and Distance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Barikoi Verify</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/verify-autocomplete">Autocomplete</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">City Corporation API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/ward-by-location">Ward by Geo location</a></li><li class="navListItem"><a class="navItem" href="/docs/ward-finding">Get Ward geometry</a></li><li class="navListItem"><a class="navItem" href="/docs/zone-by-location">Zone by Geo location</a></li><li class="navListItem"><a class="navItem" href="/docs/ward-zone-by-location">Ward &amp; Zone by Geolocation</a></li><li class="navListItem"><a class="navItem" href="/docs/city-corp-by-location">City Corporation by Geolocation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Supporting Links</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/place-types">Places Type</a></li><li class="navListItem"><a class="navItem" href="/docs/area-list">Area List</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Trips Route and Distance</h1></header><article><div><span><h2></h2>
+<p><code>GET</code> Trips Route and Distance</p>
+<pre><code class="hljs"><span class="hljs-attribute">https</span>://barikoi.xyz/v1/api/trace/user/trips/paginated?start_time=2021-06-01<span class="hljs-number">%2000</span><span class="hljs-number">%3</span>A07<span class="hljs-number">%3</span>A20&amp;end_time=2021-06-25<span class="hljs-number">%2015</span><span class="hljs-number">%3</span>A25<span class="hljs-number">%3</span>A59&amp;user_id=12&amp;api_key={api_key}&amp;page=1
+</code></pre>
+<p>This api provides a user’s all the trips (in linestring json format) along with each trip’s distance(unit in meter) of all the trips between given the start time and end time.
+<br></p>
+<p>start_time ,end_time ,user_id ,api_key ,path are required to make this get request.
+<br></p>
+<p>To get all the users trips, put user_id=ALL in api parameter.
+To determine api’s response this api takes a parameter ‘path’ , it’s value can be either true or false. If true is set to path parameter api will return all the trips (in linestring json format) along with each trip's distance(unit in meter) and if false is set to path parameter api will return total distance(unit in meter) of all the trips between given the start time and end time.</p>
+<h2><a class="anchor" aria-hidden="true" id="api-params"></a><a href="#api-params" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API PARAMS</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th style="text-align:center">Value</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>start_time</td><td style="text-align:center">2021-04-03 16:00:07</td><td>Required</td></tr>
+<tr><td>end_time</td><td style="text-align:center">2021-04-10 16:00:07</td><td>Required</td></tr>
+<tr><td>user_id</td><td style="text-align:center">1</td><td>Required</td></tr>
+<tr><td>api_key</td><td style="text-align:center">{api_key}</td><td>Required</td></tr>
+<tr><td>page</td><td style="text-align:center">1</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="user-route-and-distance-api-request-example"></a><a href="#user-route-and-distance-api-request-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Route and Distance API Request Example</h2>
+<pre><code class="hljs css language-Js">fetch(<span class="hljs-string">'https://barikoi.xyz/v1/api/trace/user/trips/paginated?start_time=2021-06-01%2000%3A07%3A20&amp;end_time=2021-06-25%2015%3A25%3A59&amp;user_id=12&amp;api_key={api_key}&amp;page=1'</span>)
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+    .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error:'</span>, error))
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Success:'</span>, response))
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="example-response"></a><a href="#example-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Response</h2>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"trips"</span>: {
+        <span class="hljs-attr">"current_page"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"data"</span>: [
+            {
+                <span class="hljs-attr">"trip_id"</span>: <span class="hljs-number">174</span>,
+                <span class="hljs-attr">"user_id"</span>: <span class="hljs-number">12</span>,
+                <span class="hljs-attr">"user_name"</span>: <span class="hljs-string">"Sadman"</span>,
+                <span class="hljs-attr">"tag"</span>: <span class="hljs-string">"test"</span>,
+                <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-attr">"start_time"</span>: <span class="hljs-string">"2021-06-24 13:01:03"</span>,
+                <span class="hljs-attr">"end_time"</span>: <span class="hljs-string">"2021-06-24 13:09:39"</span>,
+                <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2021-06-24T07:12:21.000000Z"</span>,
+                <span class="hljs-attr">"distance"</span>: <span class="hljs-string">"71.39"</span>,
+                <span class="hljs-attr">"unit"</span>: <span class="hljs-string">"METRE"</span>,
+                <span class="hljs-attr">"path"</span>: <span class="hljs-string">"{\"type\": \"LineString\", \"coordinates\": [[90.3938375, 23.8209764], [90.3936974831333, 23.82160796065862]]}"</span>
+            },
+            {
+                <span class="hljs-attr">"trip_id"</span>: <span class="hljs-number">142</span>,
+                <span class="hljs-attr">"user_id"</span>: <span class="hljs-number">12</span>,
+                <span class="hljs-attr">"user_name"</span>: <span class="hljs-string">"Sadman"</span>,
+                <span class="hljs-attr">"tag"</span>: <span class="hljs-string">"test"</span>,
+                <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-attr">"start_time"</span>: <span class="hljs-string">"2021-06-20 07:07:45"</span>,
+                <span class="hljs-attr">"end_time"</span>: <span class="hljs-string">"2021-06-20 07:18:03"</span>,
+                <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2021-06-20T01:20:43.000000Z"</span>,
+                <span class="hljs-attr">"distance"</span>: <span class="hljs-string">"4387.19"</span>,
+                <span class="hljs-attr">"unit"</span>: <span class="hljs-string">"METRE"</span>,
+                <span class="hljs-attr">"path"</span>: <span class="hljs-string">"{\"type\": \"LineString\", \"coordinates\": [[91.7379936, 24.3073152], [91.73830835063664, 24.306753537669863], [91.7388118, 24.306109], [91.7402393, 24.3050475], [91.7414137, 24.3041711], [91.7426033, 24.3032908], [91.7438309, 24.3023709], [91.7457389, 24.3020333], [91.7473725, 24.3018929], [91.7490012, 24.3017905], [91.7508179, 24.3016382], [91.7524164, 24.3015135], [91.7538966, 24.3013988], [91.7553427, 24.3004323], [91.7567693, 24.2998414], [91.7587875, 24.2997241], [91.7603416, 24.2994922], [91.7618148, 24.2992586], [91.7633374, 24.3001659], [91.76402151325492, 24.299985300156415], [91.7639683, 24.2987281], [91.76408605017652, 24.29803220002326], [91.764409, 24.2972946], [91.7652513005201, 24.2971040629604], [91.7658142, 24.2965578], [91.76615970037692, 24.295882462592303], [91.7664894, 24.2951563], [91.76645841635938, 24.29448951670615], [91.7661474, 24.293564], [91.7667657, 24.2922792], [91.7668422, 24.2909004], [91.7674239380143, 24.290123775494667], [91.7683185, 24.2900305], [91.76919052770344, 24.289638500102782]]}"</span>
+            },
+            {
+                <span class="hljs-attr">"trip_id"</span>: <span class="hljs-number">120</span>,
+                <span class="hljs-attr">"user_id"</span>: <span class="hljs-number">12</span>,
+                <span class="hljs-attr">"user_name"</span>: <span class="hljs-string">"Sadman"</span>,
+                <span class="hljs-attr">"tag"</span>: <span class="hljs-string">"test"</span>,
+                <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-attr">"start_time"</span>: <span class="hljs-string">"2021-06-17 11:34:03"</span>,
+                <span class="hljs-attr">"end_time"</span>: <span class="hljs-string">"2021-06-17 12:05:46"</span>,
+                <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2021-06-17T06:08:22.000000Z"</span>,
+                <span class="hljs-attr">"distance"</span>: <span class="hljs-string">"5862.55"</span>,
+                <span class="hljs-attr">"unit"</span>: <span class="hljs-string">"METRE"</span>,
+                <span class="hljs-attr">"path"</span>: <span class="hljs-string">"{\"type\": \"LineString\", \"coordinates\": [[90.38806, 23.8703527], [90.38807115999742, 23.87037084000041], [90.3937391, 23.82128], [90.39369840000568, 23.821122700000657], [90.3937393, 23.8229877], [90.3936644750888, 23.822825175021784], [90.393685, 23.8216361], [90.39382278853144, 23.82155294266275]]}"</span>
+            },
+            ...........
+        ],
+        <span class="hljs-attr">"first_page_url"</span>: <span class="hljs-string">"https://barikoi.xyz/v1/api/trace/user/trips/paginated?start_time=2021-06-01%2000%3A07%3A20&amp;end_time=2021-06-25%2015%3A25%3A59&amp;user_id=12&amp;api_key={api_key}&amp;page=1"</span>,
+        <span class="hljs-attr">"from"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"last_page"</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-attr">"last_page_url"</span>: <span class="hljs-string">"https://barikoi.xyz/v1/api/trace/user/trips/paginated?start_time=2021-06-01%2000%3A07%3A20&amp;end_time=2021-06-25%2015%3A25%3A59&amp;user_id=12&amp;api_key={api_key}&amp;page=2"</span>,
+        <span class="hljs-attr">"links"</span>: [
+            {
+                <span class="hljs-attr">"url"</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-attr">"label"</span>: <span class="hljs-string">"&amp;laquo; Previous"</span>,
+                <span class="hljs-attr">"active"</span>: <span class="hljs-literal">false</span>
+            },
+            {
+                <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://barikoi.xyz/v1/api/trace/user/trips/paginated?start_time=2021-06-01%2000%3A07%3A20&amp;end_time=2021-06-25%2015%3A25%3A59&amp;user_id=12&amp;api_key={api_key}&amp;page=1"</span>,
+                <span class="hljs-attr">"label"</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-attr">"active"</span>: <span class="hljs-literal">true</span>
+            },
+            {
+                <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://barikoi.xyz/v1/api/trace/user/trips/paginated?start_time=2021-06-01%2000%3A07%3A20&amp;end_time=2021-06-25%2015%3A25%3A59&amp;user_id=12&amp;api_key={api_key}&amp;page=2"</span>,
+                <span class="hljs-attr">"label"</span>: <span class="hljs-number">2</span>,
+                <span class="hljs-attr">"active"</span>: <span class="hljs-literal">false</span>
+            },
+            {
+                <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://barikoi.xyz/v1/api/trace/user/trips/paginated?start_time=2021-06-01%2000%3A07%3A20&amp;end_time=2021-06-25%2015%3A25%3A59&amp;user_id=12&amp;api_key={api_key}&amp;page=2"</span>,
+                <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Next &amp;raquo;"</span>,
+                <span class="hljs-attr">"active"</span>: <span class="hljs-literal">false</span>
+            }
+        ],
+        <span class="hljs-attr">"next_page_url"</span>: <span class="hljs-string">"https://barikoi.xyz/v1/api/trace/user/trips/paginated?start_time=2021-06-01%2000%3A07%3A20&amp;end_time=2021-06-25%2015%3A25%3A59&amp;user_id=12&amp;api_key={api_key}&amp;page=2"</span>,
+        <span class="hljs-attr">"path"</span>: <span class="hljs-string">"https://barikoi.xyz/v1/api/trace/user/trips/paginated"</span>,
+        <span class="hljs-attr">"per_page"</span>: <span class="hljs-number">20</span>,
+        <span class="hljs-attr">"prev_page_url"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"to"</span>: <span class="hljs-number">20</span>,
+        <span class="hljs-attr">"total"</span>: <span class="hljs-number">33</span>
+    },
+    <span class="hljs-attr">"status"</span>: <span class="hljs-number">200</span>
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/route-distance"><span class="arrow-prev">← </span><span>User Route and Distance</span></a><a class="docs-next button" href="/docs/verify-autocomplete"><span>Autocomplete</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api-params">API PARAMS</a></li><li><a href="#user-route-and-distance-api-request-example">User Route and Distance API Request Example</a></li><li><a href="#example-response">Example Response</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2021 Barikoi Technologies Limited</section></footer></div></body></html>

@@ -77,7 +77,7 @@ class HomeSplash extends React.Component {
           <br></br>
           <PromoSection >
             <Button href={docUrl('intro.html')}>Barikoi Api</Button>
-            <Button href={docUrl('quick-start')}>Maps API</Button>
+            <Button href={docUrl('quick-start')}>Bkoi GL JS</Button>
             <Button href={docUrl('library-intro.html')}>Javascript Api</Button>
             <Button href={docUrl('android-intro.html')}>Android sdk</Button>
             <Button href={docUrl('pricing-intro')}>Pricing</Button>

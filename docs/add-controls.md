@@ -3,7 +3,10 @@ id: add-controls
 title: Add Map Controls
 ---
 
-<iframe src="https://bkoi-gl-example-add-controls.surge.sh/" width="100%" height="280px" frameborder="0" style="border:1px solid black" allowfullscreen></iframe>
+<!-- <iframe src="https://bkoi-gl-example-add-controls.surge.sh/" width="100%" height="280px" frameborder="0" style="border:1px solid black" allowfullscreen></iframe> -->
+
+<iframe srcdoc="" width="100%" height="280px" frameborder="0" style="border:1px solid black" allowfullscreen></iframe>
+
 
 ##
 Add <span style="color:#e83e8c">Fullscreen</span> Control

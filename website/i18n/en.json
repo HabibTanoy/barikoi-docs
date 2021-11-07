@@ -213,6 +213,9 @@
       "traffic-layer": {
         "title": "Traffic Layer"
       },
+      "trips-route-distance": {
+        "title": "Trips Route and Distance"
+      },
       "union-api": {
         "title": "Union Api"
       },
@@ -234,7 +237,7 @@
     },
     "links": {
       "API": "API",
-      "Maps API": "Maps API",
+      "Bkoi GL JS": "Bkoi GL JS",
       "JavaScript Library": "JavaScript Library",
       "Android Location Library": "Android Location Library",
       "Pricing": "Pricing"

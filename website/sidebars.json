@@ -20,7 +20,8 @@
     "Barikoi Trace": [
       "push-location",
       "trace-pull",
-      "route-distance"
+      "route-distance",
+      "trips-route-distance"
     ],
     "Barikoi Verify": [
       "verify-autocomplete"

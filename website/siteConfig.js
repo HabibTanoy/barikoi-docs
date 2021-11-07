@@ -39,7 +39,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'intro', label: 'API'},
-    {doc: 'quick-start', label: 'Maps API'},
+    {doc: 'quick-start', label: 'Bkoi GL JS'},
     {doc: 'library-intro', label: 'JavaScript Library'},
     {doc: 'android-intro', label: 'Android Location Library'},
     {doc: 'pricing-intro', label: 'Pricing'},
